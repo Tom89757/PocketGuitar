@@ -1,0 +1,3467 @@
+{
+  "roots": [
+    "C",
+    "C#",
+    "Cb",
+    "D",
+    "D#",
+    "Db",
+    "E",
+    "E#",
+    "Eb",
+    "F",
+    "F#",
+    "Fb",
+    "G",
+    "G#",
+    "Gb",
+    "A",
+    "A#",
+    "Ab",
+    "B",
+    "B#",
+    "Bb"
+  ],
+  "chords": {
+    "Major": {
+      "C": {
+        "pattern": "x32010",
+        "fingers": "-32-1-"
+      },
+      "C#": {
+        "pattern": "x46664",
+        "fingers": "-13331"
+      },
+      "Cb": {
+        "pattern": "x23332",
+        "fingers": "-13331"
+      },
+      "D": {
+        "pattern": "xx0232",
+        "fingers": "---132"
+      },
+      "D#": {
+        "pattern": "x68886",
+        "fingers": "-13331"
+      },
+      "Db": {
+        "pattern": "x46664",
+        "fingers": "-13331"
+      },
+      "E": {
+        "pattern": "022100",
+        "fingers": "-231--"
+      },
+      "E#": {
+        "pattern": "x3321x",
+        "fingers": "-3421-"
+      },
+      "Eb": {
+        "pattern": "x68886",
+        "fingers": "-13331"
+      },
+      "F": {
+        "pattern": "x3321x",
+        "fingers": "-3421-"
+      },
+      "F#": {
+        "pattern": "244322",
+        "fingers": "134211"
+      },
+      "Fb": {
+        "pattern": "022100",
+        "fingers": "-231--"
+      },
+      "G": {
+        "pattern": "320003",
+        "fingers": "21---3"
+      },
+      "G#": {
+        "pattern": "466544",
+        "fingers": "134211"
+      },
+      "Gb": {
+        "pattern": "244322",
+        "fingers": "134211"
+      },
+      "A": {
+        "pattern": "x02220",
+        "fingers": "--123-"
+      },
+      "A#": {
+        "pattern": "x13331",
+        "fingers": "-13331"
+      },
+      "Ab": {
+        "pattern": "466544",
+        "fingers": "134211"
+      },
+      "B": {
+        "pattern": "x24442",
+        "fingers": "-13331"
+      },
+      "B#": {
+        "pattern": "x32010",
+        "fingers": "-32-1-"
+      },
+      "Bb": {
+        "pattern": "x13331",
+        "fingers": "-13331"
+      }
+    },
+    "Minor": {
+      "C": {
+        "pattern": "x35543",
+        "fingers": "-13421"
+      },
+      "C#": {
+        "pattern": "x46654",
+        "fingers": "-13421"
+      },
+      "Cb": {
+        "pattern": "x24432",
+        "fingers": "-13421"
+      },
+      "D": {
+        "pattern": "xx0231",
+        "fingers": "---231"
+      },
+      "D#": {
+        "pattern": "x68876",
+        "fingers": "-13421"
+      },
+      "Db": {
+        "pattern": "x46654",
+        "fingers": "-13421"
+      },
+      "E": {
+        "pattern": "022000",
+        "fingers": "-23---"
+      },
+      "E#": {
+        "pattern": "133111",
+        "fingers": "134111"
+      },
+      "Eb": {
+        "pattern": "x68876",
+        "fingers": "-13421"
+      },
+      "F": {
+        "pattern": "133111",
+        "fingers": "134111"
+      },
+      "F#": {
+        "pattern": "244222",
+        "fingers": "134111"
+      },
+      "Fb": {
+        "pattern": "022000",
+        "fingers": "-23---"
+      },
+      "G": {
+        "pattern": "355333",
+        "fingers": "134111"
+      },
+      "G#": {
+        "pattern": "466444",
+        "fingers": "134111"
+      },
+      "Gb": {
+        "pattern": "244222",
+        "fingers": "134111"
+      },
+      "A": {
+        "pattern": "x02210",
+        "fingers": "--231-"
+      },
+      "A#": {
+        "pattern": "x13321",
+        "fingers": "-13421"
+      },
+      "Ab": {
+        "pattern": "466444",
+        "fingers": "134111"
+      },
+      "B": {
+        "pattern": "x24432",
+        "fingers": "-13421"
+      },
+      "B#": {
+        "pattern": "x35543",
+        "fingers": "-13421"
+      },
+      "Bb": {
+        "pattern": "x13321",
+        "fingers": "-13421"
+      }
+    },
+    "Power": {
+      "C": {
+        "pattern": "x35xxx",
+        "fingers": "-14---"
+      },
+      "C#": {
+        "pattern": "x46xxx",
+        "fingers": "-14---"
+      },
+      "Cb": {
+        "pattern": "x24xxx",
+        "fingers": "-14---"
+      },
+      "D": {
+        "pattern": "xx01xx",
+        "fingers": "---1--"
+      },
+      "D#": {
+        "pattern": "x68xxx",
+        "fingers": "-14---"
+      },
+      "Db": {
+        "pattern": "x46xxx",
+        "fingers": "-14---"
+      },
+      "E": {
+        "pattern": "02xxxx",
+        "fingers": "-1----"
+      },
+      "E#": {
+        "pattern": "13xxxx",
+        "fingers": "14----"
+      },
+      "Eb": {
+        "pattern": "x68xxx",
+        "fingers": "-14---"
+      },
+      "F": {
+        "pattern": "13xxxx",
+        "fingers": "14----"
+      },
+      "F#": {
+        "pattern": "24xxxx",
+        "fingers": "14----"
+      },
+      "Fb": {
+        "pattern": "02xxxx",
+        "fingers": "-1----"
+      },
+      "G": {
+        "pattern": "35xxxx",
+        "fingers": "14----"
+      },
+      "G#": {
+        "pattern": "46xxxx",
+        "fingers": "14----"
+      },
+      "Gb": {
+        "pattern": "24xxxx",
+        "fingers": "14----"
+      },
+      "A": {
+        "pattern": "x02xxx",
+        "fingers": "--1---"
+      },
+      "A#": {
+        "pattern": "x13xxx",
+        "fingers": "-14---"
+      },
+      "Ab": {
+        "pattern": "46xxxx",
+        "fingers": "14----"
+      },
+      "B": {
+        "pattern": "x24xxx",
+        "fingers": "-14---"
+      },
+      "B#": {
+        "pattern": "x35xxx",
+        "fingers": "-14---"
+      },
+      "Bb": {
+        "pattern": "x13xxx",
+        "fingers": "-14---"
+      }
+    },
+    "7": {
+      "C": {
+        "pattern": "x32310",
+        "fingers": "-3241-"
+      },
+      "C#": {
+        "pattern": "x46464",
+        "fingers": "-13141"
+      },
+      "Cb": {
+        "pattern": "x21202",
+        "fingers": "-213-4"
+      },
+      "D": {
+        "pattern": "xx0212",
+        "fingers": "---213"
+      },
+      "D#": {
+        "pattern": "x68686",
+        "fingers": "-13141"
+      },
+      "Db": {
+        "pattern": "x46464",
+        "fingers": "-13141"
+      },
+      "E": {
+        "pattern": "020100",
+        "fingers": "-2-1--"
+      },
+      "E#": {
+        "pattern": "131211",
+        "fingers": "131211"
+      },
+      "Eb": {
+        "pattern": "x68686",
+        "fingers": "-13141"
+      },
+      "F": {
+        "pattern": "131211",
+        "fingers": "131211"
+      },
+      "F#": {
+        "pattern": "242322",
+        "fingers": "131211"
+      },
+      "Fb": {
+        "pattern": "020100",
+        "fingers": "-2-1--"
+      },
+      "G": {
+        "pattern": "320001",
+        "fingers": "32---1"
+      },
+      "G#": {
+        "pattern": "464544",
+        "fingers": "131211"
+      },
+      "Gb": {
+        "pattern": "242322",
+        "fingers": "131211"
+      },
+      "A": {
+        "pattern": "x02020",
+        "fingers": "--1-2-"
+      },
+      "A#": {
+        "pattern": "x13131",
+        "fingers": "-13141"
+      },
+      "Ab": {
+        "pattern": "464544",
+        "fingers": "131211"
+      },
+      "B": {
+        "pattern": "x21202",
+        "fingers": "-213-4"
+      },
+      "B#": {
+        "pattern": "x32310",
+        "fingers": "-3241-"
+      },
+      "Bb": {
+        "pattern": "x13131",
+        "fingers": "-13141"
+      }
+    },
+    "maj7": {
+      "C": {
+        "pattern": "x32000",
+        "fingers": "-32---"
+      },
+      "C#": {
+        "pattern": "x46564",
+        "fingers": "-13241"
+      },
+      "Cb": {
+        "pattern": "x24342",
+        "fingers": "-13241"
+      },
+      "D": {
+        "pattern": "xx0222",
+        "fingers": "---123"
+      },
+      "D#": {
+        "pattern": "x68786",
+        "fingers": "-13241"
+      },
+      "Db": {
+        "pattern": "x46564",
+        "fingers": "-13241"
+      },
+      "E": {
+        "pattern": "x79897",
+        "fingers": "-13241"
+      },
+      "E#": {
+        "pattern": "x33210",
+        "fingers": "-3421-"
+      },
+      "Eb": {
+        "pattern": "x68786",
+        "fingers": "-13241"
+      },
+      "F": {
+        "pattern": "x33210",
+        "fingers": "-3421-"
+      },
+      "F#": {
+        "pattern": "2x332x",
+        "fingers": "1-342-"
+      },
+      "Fb": {
+        "pattern": "x79897",
+        "fingers": "-1324-"
+      },
+      "G": {
+        "pattern": "3x0002",
+        "fingers": "2----1"
+      },
+      "G#": {
+        "pattern": "4x554x",
+        "fingers": "1-342-"
+      },
+      "Gb": {
+        "pattern": "2x442x",
+        "fingers": "1-342-"
+      },
+      "A": {
+        "pattern": "x02120",
+        "fingers": "--213-"
+      },
+      "A#": {
+        "pattern": "x13231",
+        "fingers": "-13241"
+      },
+      "Ab": {
+        "pattern": "4x554x",
+        "fingers": "1-342-"
+      },
+      "B": {
+        "pattern": "x24342",
+        "fingers": "-13241"
+      },
+      "B#": {
+        "pattern": "x32000",
+        "fingers": "-32---"
+      },
+      "Bb": {
+        "pattern": "x13231",
+        "fingers": "-13241"
+      }
+    },
+    "m7": {
+      "C": {
+        "pattern": "x35343",
+        "fingers": "-13121"
+      },
+      "C#": {
+        "pattern": "x46454",
+        "fingers": "-13121"
+      },
+      "Cb": {
+        "pattern": "x20202",
+        "fingers": "-2-3-4"
+      },
+      "D": {
+        "pattern": "xx0211",
+        "fingers": "---312"
+      },
+      "D#": {
+        "pattern": "x68676",
+        "fingers": "-13121"
+      },
+      "Db": {
+        "pattern": "x46454",
+        "fingers": "-13121"
+      },
+      "E": {
+        "pattern": "020000",
+        "fingers": "-2----"
+      },
+      "E#": {
+        "pattern": "131111",
+        "fingers": "131111"
+      },
+      "Eb": {
+        "pattern": "x68676",
+        "fingers": "-13121"
+      },
+      "F": {
+        "pattern": "131111",
+        "fingers": "131111"
+      },
+      "F#": {
+        "pattern": "232222",
+        "fingers": "131111"
+      },
+      "Fb": {
+        "pattern": "020000",
+        "fingers": "-2----"
+      },
+      "G": {
+        "pattern": "353333",
+        "fingers": "131111"
+      },
+      "G#": {
+        "pattern": "464444",
+        "fingers": "131111"
+      },
+      "Gb": {
+        "pattern": "242222",
+        "fingers": "131111"
+      },
+      "A": {
+        "pattern": "x02010",
+        "fingers": "--2-1-"
+      },
+      "A#": {
+        "pattern": "x13121",
+        "fingers": "-13121"
+      },
+      "Ab": {
+        "pattern": "464444",
+        "fingers": "131111"
+      },
+      "B": {
+        "pattern": "x20202",
+        "fingers": "-2-3-4"
+      },
+      "B#": {
+        "pattern": "x35343",
+        "fingers": "-13121"
+      },
+      "Bb": {
+        "pattern": "x13121",
+        "fingers": "-13121"
+      }
+    },
+    "sus4": {
+      "C": {
+        "pattern": "x3301x",
+        "fingers": "-34-1-"
+      },
+      "C#": {
+        "pattern": "x46674",
+        "fingers": "-13341"
+      },
+      "Cb": {
+        "pattern": "x24452",
+        "fingers": "-13341"
+      },
+      "D": {
+        "pattern": "xx0233",
+        "fingers": "---134"
+      },
+      "D#": {
+        "pattern": "x68896",
+        "fingers": "-13341"
+      },
+      "Db": {
+        "pattern": "x46674",
+        "fingers": "-13341"
+      },
+      "E": {
+        "pattern": "022200",
+        "fingers": "-234--"
+      },
+      "E#": {
+        "pattern": "133311",
+        "fingers": "133311"
+      },
+      "Eb": {
+        "pattern": "x67786",
+        "fingers": "-13341"
+      },
+      "F": {
+        "pattern": "133311",
+        "fingers": "133311"
+      },
+      "F#": {
+        "pattern": "244422",
+        "fingers": "133311"
+      },
+      "Fb": {
+        "pattern": "023400",
+        "fingers": "-234--"
+      },
+      "G": {
+        "pattern": "3x0013",
+        "fingers": "3---14"
+      },
+      "G#": {
+        "pattern": "466644",
+        "fingers": "133311"
+      },
+      "Gb": {
+        "pattern": "244422",
+        "fingers": "133311"
+      },
+      "A": {
+        "pattern": "x02230",
+        "fingers": "--123-"
+      },
+      "A#": {
+        "pattern": "x13341",
+        "fingers": "-13341"
+      },
+      "Ab": {
+        "pattern": "466644",
+        "fingers": "133311"
+      },
+      "B": {
+        "pattern": "x24452",
+        "fingers": "-13341"
+      },
+      "B#": {
+        "pattern": "x3301x",
+        "fingers": "-34-1-"
+      },
+      "Bb": {
+        "pattern": "x13341",
+        "fingers": "-13341"
+      }
+    },
+    "sus2": {
+      "C": {
+        "pattern": "x3001x",
+        "fingers": "-3--1-"
+      },
+      "C#": {
+        "pattern": "x46644",
+        "fingers": "-13411"
+      },
+      "Cb": {
+        "pattern": "x24422",
+        "fingers": "-13411"
+      },
+      "D": {
+        "pattern": "xx0230",
+        "fingers": "---23-"
+      },
+      "D#": {
+        "pattern": "x68866",
+        "fingers": "-13411"
+      },
+      "Db": {
+        "pattern": "x46644",
+        "fingers": "-13411"
+      },
+      "E": {
+        "pattern": "x79977",
+        "fingers": "-13411"
+      },
+      "E#": {
+        "pattern": "x3301x",
+        "fingers": "-34-1-"
+      },
+      "Eb": {
+        "pattern": "x68866",
+        "fingers": "-13411"
+      },
+      "F": {
+        "pattern": "x3301x",
+        "fingers": "-34-1-"
+      },
+      "F#": {
+        "pattern": "x-9-11-11-9-9",
+        "fingers": "-13411"
+      },
+      "Fb": {
+        "pattern": "x79977",
+        "fingers": "-13411"
+      },
+      "G": {
+        "pattern": "3x0233",
+        "fingers": "2--134"
+      },
+      "G#": {
+        "pattern": "x-11-13-13-11-11",
+        "fingers": "-13411"
+      },
+      "Gb": {
+        "pattern": "x-9-11-11-9-9",
+        "fingers": "-13411"
+      },
+      "A": {
+        "pattern": "x02200",
+        "fingers": "--12--"
+      },
+      "A#": {
+        "pattern": "x13311",
+        "fingers": "-13411"
+      },
+      "Ab": {
+        "pattern": "x-11-13-13-11-11",
+        "fingers": "-13411"
+      },
+      "B": {
+        "pattern": "x24422",
+        "fingers": "-13411"
+      },
+      "B#": {
+        "pattern": "x3001x",
+        "fingers": "-3--1-"
+      },
+      "Bb": {
+        "pattern": "x13311",
+        "fingers": "-13411"
+      }
+    },
+    "aug": {
+      "C": {
+        "pattern": "x3211x",
+        "fingers": "-3211-"
+      },
+      "C#": {
+        "pattern": "x4322x",
+        "fingers": "-3211-"
+      },
+      "Cb": {
+        "pattern": "x-10-9-8-8-x",
+        "fingers": "-3211-"
+      },
+      "D": {
+        "pattern": "x5433x",
+        "fingers": "-3211-"
+      },
+      "D#": {
+        "pattern": "x6544x",
+        "fingers": "-3211-"
+      },
+      "Db": {
+        "pattern": "x4322x",
+        "fingers": "-3211-"
+      },
+      "E": {
+        "pattern": "x7655x",
+        "fingers": "-3211-"
+      },
+      "E#": {
+        "pattern": "x4322x",
+        "fingers": "-3211-"
+      },
+      "Eb": {
+        "pattern": "x6544x",
+        "fingers": "-3211-"
+      },
+      "F": {
+        "pattern": "x4322x",
+        "fingers": "-3211-"
+      },
+      "F#": {
+        "pattern": "x5433x",
+        "fingers": "-3211-"
+      },
+      "Fb": {
+        "pattern": "x7655x",
+        "fingers": "-3211-"
+      },
+      "G": {
+        "pattern": "x6544x",
+        "fingers": "-3211-"
+      },
+      "G#": {
+        "pattern": "x7655x",
+        "fingers": "-3211-"
+      },
+      "Gb": {
+        "pattern": "x5433x",
+        "fingers": "-3211-"
+      },
+      "A": {
+        "pattern": "x8766x",
+        "fingers": "-3211-"
+      },
+      "A#": {
+        "pattern": "x9877x",
+        "fingers": "-3211-"
+      },
+      "Ab": {
+        "pattern": "x7655x",
+        "fingers": "-3211-"
+      },
+      "B": {
+        "pattern": "x-10-9-8-8-x",
+        "fingers": "-3211-"
+      },
+      "B#": {
+        "pattern": "x3211x",
+        "fingers": "-3211-"
+      },
+      "Bb": {
+        "pattern": "x9877x",
+        "fingers": "-3211-"
+      }
+    },
+    "dim": {
+      "C": {
+        "pattern": "x1232x",
+        "fingers": "-1243-"
+      },
+      "C#": {
+        "pattern": "x45654",
+        "fingers": "-1243-"
+      },
+      "Cb": {
+        "pattern": "x2342x",
+        "fingers": "-1243-"
+      },
+      "D": {
+        "pattern": "x5676x",
+        "fingers": "-1243-"
+      },
+      "D#": {
+        "pattern": "x6786x",
+        "fingers": "-1243-"
+      },
+      "Db": {
+        "pattern": "x4565x",
+        "fingers": "-1243-"
+      },
+      "E": {
+        "pattern": "x7898x",
+        "fingers": "-1243-"
+      },
+      "E#": {
+        "pattern": "x-8-9-10-9-x",
+        "fingers": "-1243-"
+      },
+      "Eb": {
+        "pattern": "x6787x",
+        "fingers": "-1243-"
+      },
+      "F": {
+        "pattern": "x-8-9-10-9-x",
+        "fingers": "-1243-"
+      },
+      "F#": {
+        "pattern": "2342xx",
+        "fingers": "1342--"
+      },
+      "Fb": {
+        "pattern": "x7898x",
+        "fingers": "-1243-"
+      },
+      "G": {
+        "pattern": "3453xx",
+        "fingers": "1342--"
+      },
+      "G#": {
+        "pattern": "4564xx",
+        "fingers": "1342--"
+      },
+      "Gb": {
+        "pattern": "2342xx",
+        "fingers": "1342--"
+      },
+      "A": {
+        "pattern": "5675xx",
+        "fingers": "1342--"
+      },
+      "A#": {
+        "pattern": "x1232x",
+        "fingers": "-1243-"
+      },
+      "Ab": {
+        "pattern": "4564xx",
+        "fingers": "1342--"
+      },
+      "B": {
+        "pattern": "x2343x",
+        "fingers": "-1243-"
+      },
+      "B#": {
+        "pattern": "x3454x",
+        "fingers": "-1243-"
+      },
+      "Bb": {
+        "pattern": "x1232x",
+        "fingers": "-1243-"
+      }
+    },
+    "dim7": {
+      "C": {
+        "pattern": "x3424x",
+        "fingers": "-2314-"
+      },
+      "C#": {
+        "pattern": "x4535x",
+        "fingers": "-2314-"
+      },
+      "Cb": {
+        "pattern": "x2313x",
+        "fingers": "-2314-"
+      },
+      "D": {
+        "pattern": "x5646x",
+        "fingers": "-2314-"
+      },
+      "D#": {
+        "pattern": "x6757x",
+        "fingers": "-2314-"
+      },
+      "Db": {
+        "pattern": "x4535x",
+        "fingers": "-2314-"
+      },
+      "E": {
+        "pattern": "x7868x",
+        "fingers": "-1314-"
+      },
+      "E#": {
+        "pattern": "x8979x",
+        "fingers": "-2314-"
+      },
+      "Eb": {
+        "pattern": "x6757x",
+        "fingers": "-2314-"
+      },
+      "F": {
+        "pattern": "x8979x",
+        "fingers": "-2314-"
+      },
+      "F#": {
+        "pattern": "2x121x",
+        "fingers": "2-131-"
+      },
+      "Fb": {
+        "pattern": "x7868x",
+        "fingers": "-2314-"
+      },
+      "G": {
+        "pattern": "3x232x",
+        "fingers": "2-131-"
+      },
+      "G#": {
+        "pattern": "4x342x",
+        "fingers": "2-131-"
+      },
+      "Gb": {
+        "pattern": "2x131x",
+        "fingers": "2-131-"
+      },
+      "A": {
+        "pattern": "5x454x",
+        "fingers": "2-131-"
+      },
+      "A#": {
+        "pattern": "6x565x",
+        "fingers": "2-131-"
+      },
+      "Ab": {
+        "pattern": "4x343x",
+        "fingers": "2-131-"
+      },
+      "B": {
+        "pattern": "x2313x",
+        "fingers": "-2314-"
+      },
+      "B#": {
+        "pattern": "x3424x",
+        "fingers": "-2314-"
+      },
+      "Bb": {
+        "pattern": "6x565x",
+        "fingers": "-2131-"
+      }
+    },
+    "11": {
+      "C": {
+        "pattern": "x3x331",
+        "fingers": "-2-341"
+      },
+      "C#": {
+        "pattern": "x4x442",
+        "fingers": "-2-341"
+      },
+      "Cb": {
+        "pattern": "7x765x",
+        "fingers": "3-421-"
+      },
+      "D": {
+        "pattern": "x5x553",
+        "fingers": "-2-341"
+      },
+      "D#": {
+        "pattern": "x6x664",
+        "fingers": "-2-341"
+      },
+      "Db": {
+        "pattern": "x4x442",
+        "fingers": "-2-341"
+      },
+      "E": {
+        "pattern": "x7x775",
+        "fingers": "-2-341"
+      },
+      "E#": {
+        "pattern": "x8x886",
+        "fingers": "-2-341"
+      },
+      "Eb": {
+        "pattern": "x6x664",
+        "fingers": "-2-341"
+      },
+      "F": {
+        "pattern": "x8x886",
+        "fingers": "-2-341"
+      },
+      "F#": {
+        "pattern": "x9x997",
+        "fingers": "-2-341"
+      },
+      "Fb": {
+        "pattern": "x7x775",
+        "fingers": "-2-341"
+      },
+      "G": {
+        "pattern": "3x321x",
+        "fingers": "3-421-"
+      },
+      "G#": {
+        "pattern": "4x432x",
+        "fingers": "2-421-"
+      },
+      "Gb": {
+        "pattern": "x9x997",
+        "fingers": "-2-341"
+      },
+      "A": {
+        "pattern": "5x543x",
+        "fingers": "3-421-"
+      },
+      "A#": {
+        "pattern": "6x654x",
+        "fingers": "3-421-"
+      },
+      "Ab": {
+        "pattern": "4x432x",
+        "fingers": "3-421-"
+      },
+      "B": {
+        "pattern": "7x765x",
+        "fingers": "3-421-"
+      },
+      "B#": {
+        "pattern": "x3x331",
+        "fingers": "-2-341"
+      },
+      "Bb": {
+        "pattern": "6x654x",
+        "fingers": "3-421-"
+      }
+    },
+    "9": {
+      "C": {
+        "pattern": "x3233x",
+        "fingers": "-2134-"
+      },
+      "C#": {
+        "pattern": "x4344x",
+        "fingers": "-2134-"
+      },
+      "Cb": {
+        "pattern": "x2122x",
+        "fingers": "-2134-"
+      },
+      "D": {
+        "pattern": "x5455x",
+        "fingers": "-2134-"
+      },
+      "D#": {
+        "pattern": "x6566x",
+        "fingers": "-2134-"
+      },
+      "Db": {
+        "pattern": "x4344x",
+        "fingers": "-2134-"
+      },
+      "E": {
+        "pattern": "x7677x",
+        "fingers": "-2134-"
+      },
+      "E#": {
+        "pattern": "x8788x",
+        "fingers": "-2134-"
+      },
+      "Eb": {
+        "pattern": "x6566x",
+        "fingers": "-2134-"
+      },
+      "F": {
+        "pattern": "x8788x",
+        "fingers": "-2134-"
+      },
+      "F#": {
+        "pattern": "xx2324",
+        "fingers": "--1324"
+      },
+      "Fb": {
+        "pattern": "x7677x",
+        "fingers": "-2134-"
+      },
+      "G": {
+        "pattern": "xx3435",
+        "fingers": "--1324"
+      },
+      "G#": {
+        "pattern": "xx4546",
+        "fingers": "--1324"
+      },
+      "Gb": {
+        "pattern": "xx2324",
+        "fingers": "--1324"
+      },
+      "A": {
+        "pattern": "xx5657",
+        "fingers": "--1324"
+      },
+      "A#": {
+        "pattern": "xx6768",
+        "fingers": "--1324"
+      },
+      "Ab": {
+        "pattern": "xx4546",
+        "fingers": "--1324"
+      },
+      "B": {
+        "pattern": "x2122x",
+        "fingers": "-2134-"
+      },
+      "B#": {
+        "pattern": "x3233x",
+        "fingers": "-2134-"
+      },
+      "Bb": {
+        "pattern": "xx6768",
+        "fingers": "--1324"
+      }
+    },
+    "7b5": {
+      "C": {
+        "pattern": "x3435x",
+        "fingers": "-1324-"
+      },
+      "C#": {
+        "pattern": "x4546x",
+        "fingers": "-1324-"
+      },
+      "Cb": {
+        "pattern": "x2324x",
+        "fingers": "-1324-"
+      },
+      "D": {
+        "pattern": "x5657x",
+        "fingers": "-1324-"
+      },
+      "D#": {
+        "pattern": "x6768x",
+        "fingers": "-1324-"
+      },
+      "Db": {
+        "pattern": "x4546x",
+        "fingers": "-1324-"
+      },
+      "E": {
+        "pattern": "x7879x",
+        "fingers": "-1324-"
+      },
+      "E#": {
+        "pattern": "x-8-9-8-10-x",
+        "fingers": "-1324-"
+      },
+      "Eb": {
+        "pattern": "x6768x",
+        "fingers": "-1324-"
+      },
+      "F": {
+        "pattern": "x-8-9-8-10-x",
+        "fingers": "-1324-"
+      },
+      "F#": {
+        "pattern": "2x231x",
+        "fingers": "2-341-"
+      },
+      "Fb": {
+        "pattern": "x7879x",
+        "fingers": "-1324-"
+      },
+      "G": {
+        "pattern": "3x342x",
+        "fingers": "2-341-"
+      },
+      "G#": {
+        "pattern": "4x453x",
+        "fingers": "2-341-"
+      },
+      "Gb": {
+        "pattern": "2x231x",
+        "fingers": "2-341-"
+      },
+      "A": {
+        "pattern": "5x564x",
+        "fingers": "2-341-"
+      },
+      "A#": {
+        "pattern": "x1213x",
+        "fingers": "-1324-"
+      },
+      "Ab": {
+        "pattern": "4x453x",
+        "fingers": "2-341-"
+      },
+      "B": {
+        "pattern": "x2324x",
+        "fingers": "-1324-"
+      },
+      "B#": {
+        "pattern": "x3435x",
+        "fingers": "-1324-"
+      },
+      "Bb": {
+        "pattern": "x1213x",
+        "fingers": "-1324-"
+      }
+    },
+    "7b9": {
+      "C": {
+        "pattern": "x3232x",
+        "fingers": "-2131-"
+      },
+      "C#": {
+        "pattern": "x4343x",
+        "fingers": "-2131-"
+      },
+      "Cb": {
+        "pattern": "x2121x",
+        "fingers": "-2131-"
+      },
+      "D": {
+        "pattern": "x5454x",
+        "fingers": "-2131-"
+      },
+      "D#": {
+        "pattern": "x6565x",
+        "fingers": "-2131-"
+      },
+      "Db": {
+        "pattern": "x4343x",
+        "fingers": "-2131-"
+      },
+      "E": {
+        "pattern": "x7676x",
+        "fingers": "-2131-"
+      },
+      "E#": {
+        "pattern": "xx1212",
+        "fingers": "--1324"
+      },
+      "Eb": {
+        "pattern": "x6565x",
+        "fingers": "-2131-"
+      },
+      "F": {
+        "pattern": "xx1212",
+        "fingers": "--1324"
+      },
+      "F#": {
+        "pattern": "xx2323",
+        "fingers": "--1324"
+      },
+      "Fb": {
+        "pattern": "x7676x",
+        "fingers": "-2131-"
+      },
+      "G": {
+        "pattern": "xx3434",
+        "fingers": "--1324"
+      },
+      "G#": {
+        "pattern": "xx4545",
+        "fingers": "--1324"
+      },
+      "Gb": {
+        "pattern": "xx2323",
+        "fingers": "--1324"
+      },
+      "A": {
+        "pattern": "xx5656",
+        "fingers": "--1324"
+      },
+      "A#": {
+        "pattern": "xx6767",
+        "fingers": "--1324"
+      },
+      "Ab": {
+        "pattern": "xx4545",
+        "fingers": "--1324"
+      },
+      "B": {
+        "pattern": "x2121x",
+        "fingers": "-2131-"
+      },
+      "B#": {
+        "pattern": "x3232x",
+        "fingers": "-2131-"
+      },
+      "Bb": {
+        "pattern": "xx6767",
+        "fingers": "--1324"
+      }
+    },
+    "7#5": {
+      "C": {
+        "pattern": "x323x4",
+        "fingers": "-213-4"
+      },
+      "C#": {
+        "pattern": "x434x5",
+        "fingers": "-213-4"
+      },
+      "Cb": {
+        "pattern": "x212x3",
+        "fingers": "-213-4"
+      },
+      "D": {
+        "pattern": "x545x6",
+        "fingers": "-213-4"
+      },
+      "D#": {
+        "pattern": "x656x7",
+        "fingers": "-213-4"
+      },
+      "Db": {
+        "pattern": "x434x5",
+        "fingers": "-213-4"
+      },
+      "E": {
+        "pattern": "x767x8",
+        "fingers": "-213-4"
+      },
+      "E#": {
+        "pattern": "x878x9",
+        "fingers": "-213-4"
+      },
+      "Eb": {
+        "pattern": "x656x7",
+        "fingers": "-213-4"
+      },
+      "F": {
+        "pattern": "x878x9",
+        "fingers": "-213-4"
+      },
+      "F#": {
+        "pattern": "2x233x",
+        "fingers": "1-234-"
+      },
+      "Fb": {
+        "pattern": "x767x8",
+        "fingers": "-213-4"
+      },
+      "G": {
+        "pattern": "3x344x",
+        "fingers": "1-234-"
+      },
+      "G#": {
+        "pattern": "4x455x",
+        "fingers": "1-234-"
+      },
+      "Gb": {
+        "pattern": "1x234x",
+        "fingers": "1-234-"
+      },
+      "A": {
+        "pattern": "5x566x",
+        "fingers": "1-234-"
+      },
+      "A#": {
+        "pattern": "6x677x",
+        "fingers": "1-234-"
+      },
+      "Ab": {
+        "pattern": "4x455x",
+        "fingers": "1-234-"
+      },
+      "B": {
+        "pattern": "x212x4",
+        "fingers": "-213-4"
+      },
+      "B#": {
+        "pattern": "x323x4",
+        "fingers": "-213-4"
+      },
+      "Bb": {
+        "pattern": "6x677x",
+        "fingers": "1-234-"
+      }
+    },
+    "7#9": {
+      "C": {
+        "pattern": "x3234x",
+        "fingers": "-2134-"
+      },
+      "C#": {
+        "pattern": "x4245x",
+        "fingers": "-2134-"
+      },
+      "Cb": {
+        "pattern": "x2123x",
+        "fingers": "-2134-"
+      },
+      "D": {
+        "pattern": "x5456x",
+        "fingers": "-2134-"
+      },
+      "D#": {
+        "pattern": "x6567x",
+        "fingers": "-2134-"
+      },
+      "Db": {
+        "pattern": "x4345x",
+        "fingers": "-2134-"
+      },
+      "E": {
+        "pattern": "x7678x",
+        "fingers": "-2134-"
+      },
+      "E#": {
+        "pattern": "x8789x",
+        "fingers": "-2134-"
+      },
+      "Eb": {
+        "pattern": "x6567x",
+        "fingers": "-2134-"
+      },
+      "F": {
+        "pattern": "x8789x",
+        "fingers": "-2134-"
+      },
+      "F#": {
+        "pattern": "xx4355",
+        "fingers": "--2134"
+      },
+      "Fb": {
+        "pattern": "x7678x",
+        "fingers": "-2134-"
+      },
+      "G": {
+        "pattern": "xx5466",
+        "fingers": "--2134"
+      },
+      "G#": {
+        "pattern": "xx6577",
+        "fingers": "--2134"
+      },
+      "Gb": {
+        "pattern": "xx4355",
+        "fingers": "--2134"
+      },
+      "A": {
+        "pattern": "xx7688",
+        "fingers": "--2134"
+      },
+      "A#": {
+        "pattern": "xx8799",
+        "fingers": "--2134"
+      },
+      "Ab": {
+        "pattern": "xx6577",
+        "fingers": "--2134"
+      },
+      "B": {
+        "pattern": "x2123x",
+        "fingers": "-2134-"
+      },
+      "B#": {
+        "pattern": "x3234x",
+        "fingers": "-2134-"
+      },
+      "Bb": {
+        "pattern": "xx8799",
+        "fingers": "--2134"
+      }
+    },
+    "7sus4": {
+      "C": {
+        "pattern": "x35363",
+        "fingers": "-13141"
+      },
+      "C#": {
+        "pattern": "x46474",
+        "fingers": "-13141"
+      },
+      "Cb": {
+        "pattern": "x24252",
+        "fingers": "-13141"
+      },
+      "D": {
+        "pattern": "x57585",
+        "fingers": "-13141"
+      },
+      "D#": {
+        "pattern": "x68696",
+        "fingers": "-13141"
+      },
+      "Db": {
+        "pattern": "x46474",
+        "fingers": "-13141"
+      },
+      "E": {
+        "pattern": "020200",
+        "fingers": "-2-3--"
+      },
+      "E#": {
+        "pattern": "131311",
+        "fingers": "131411"
+      },
+      "Eb": {
+        "pattern": "x68696",
+        "fingers": "-13141"
+      },
+      "F": {
+        "pattern": "131311",
+        "fingers": "131411"
+      },
+      "F#": {
+        "pattern": "242422",
+        "fingers": "131411"
+      },
+      "Fb": {
+        "pattern": "020200",
+        "fingers": "-2-3--"
+      },
+      "G": {
+        "pattern": "353533",
+        "fingers": "131411"
+      },
+      "G#": {
+        "pattern": "464644",
+        "fingers": "131411"
+      },
+      "Gb": {
+        "pattern": "242422",
+        "fingers": "131411"
+      },
+      "A": {
+        "pattern": "x02030",
+        "fingers": "--1-3-"
+      },
+      "A#": {
+        "pattern": "x13141",
+        "fingers": "-13141"
+      },
+      "Ab": {
+        "pattern": "464644",
+        "fingers": "131411"
+      },
+      "B": {
+        "pattern": "x24252",
+        "fingers": "-13141"
+      },
+      "B#": {
+        "pattern": "x35363",
+        "fingers": "-13141"
+      },
+      "Bb": {
+        "pattern": "x13141",
+        "fingers": "-13141"
+      }
+    },
+    "13": {
+      "C": {
+        "pattern": "x3x355",
+        "fingers": "-1-244"
+      },
+      "C#": {
+        "pattern": "x4x466",
+        "fingers": "-1-244"
+      },
+      "Cb": {
+        "pattern": "x2x244",
+        "fingers": "-1-244"
+      },
+      "D": {
+        "pattern": "x5x577",
+        "fingers": "-1-244"
+      },
+      "D#": {
+        "pattern": "x6x688",
+        "fingers": "-1-244"
+      },
+      "Db": {
+        "pattern": "x4x466",
+        "fingers": "-1-244"
+      },
+      "E": {
+        "pattern": "x7x799",
+        "fingers": "-1-244"
+      },
+      "E#": {
+        "pattern": "1x123x",
+        "fingers": "1-234-"
+      },
+      "Eb": {
+        "pattern": "x6x688",
+        "fingers": "-1-244"
+      },
+      "F": {
+        "pattern": "1x123x",
+        "fingers": "1-234-"
+      },
+      "F#": {
+        "pattern": "2x234x",
+        "fingers": "1-234-"
+      },
+      "Fb": {
+        "pattern": "x7x799",
+        "fingers": "-1-244"
+      },
+      "G": {
+        "pattern": "3x345x",
+        "fingers": "1-234-"
+      },
+      "G#": {
+        "pattern": "4x456x",
+        "fingers": "1-234-"
+      },
+      "Gb": {
+        "pattern": "2x234x",
+        "fingers": "1-234-"
+      },
+      "A": {
+        "pattern": "5x567x",
+        "fingers": "1-234-"
+      },
+      "A#": {
+        "pattern": "x1x133",
+        "fingers": "-1-244"
+      },
+      "Ab": {
+        "pattern": "4x456x",
+        "fingers": "1-234-"
+      },
+      "B": {
+        "pattern": "x2x244",
+        "fingers": "-1-244"
+      },
+      "B#": {
+        "pattern": "x3x355",
+        "fingers": "-1-244"
+      },
+      "Bb": {
+        "pattern": "x1x133",
+        "fingers": "-1-244"
+      }
+    },
+    "add9": {
+      "C": {
+        "pattern": "x32030",
+        "fingers": "-21-3-"
+      },
+      "C#": {
+        "pattern": "x-x-11-10-9-11",
+        "fingers": "--3214"
+      },
+      "Cb": {
+        "pattern": "xx9879",
+        "fingers": "--3214"
+      },
+      "D": {
+        "pattern": "x-x-12-11-10-12",
+        "fingers": "--3214"
+      },
+      "D#": {
+        "pattern": "x-x-13-13-11-13",
+        "fingers": "--3214"
+      },
+      "Db": {
+        "pattern": "x-x-11-10-9-11",
+        "fingers": "--3214"
+      },
+      "E": {
+        "pattern": "022102",
+        "fingers": "-231-4"
+      },
+      "E#": {
+        "pattern": "xx3213",
+        "fingers": "--3214"
+      },
+      "Eb": {
+        "pattern": "x-x-13-12-11-13",
+        "fingers": "--3214"
+      },
+      "F": {
+        "pattern": "xx3213",
+        "fingers": "--3214"
+      },
+      "F#": {
+        "pattern": "xx4324",
+        "fingers": "--3214"
+      },
+      "Fb": {
+        "pattern": "022102",
+        "fingers": "-231-4"
+      },
+      "G": {
+        "pattern": "3x0203",
+        "fingers": "2--1-3"
+      },
+      "G#": {
+        "pattern": "xx6546",
+        "fingers": "--3214"
+      },
+      "Gb": {
+        "pattern": "xx4324",
+        "fingers": "--3214"
+      },
+      "A": {
+        "pattern": "xx7657",
+        "fingers": "--3214"
+      },
+      "A#": {
+        "pattern": "xx8768",
+        "fingers": "--3214"
+      },
+      "Ab": {
+        "pattern": "xx6546",
+        "fingers": "--3214"
+      },
+      "B": {
+        "pattern": "xx9879",
+        "fingers": "--3214"
+      },
+      "B#": {
+        "pattern": "x32030",
+        "fingers": "-21-3-"
+      },
+      "Bb": {
+        "pattern": "xx8768",
+        "fingers": "--3214"
+      }
+    },
+    "maj9": {
+      "C": {
+        "pattern": "x3243x",
+        "fingers": "-2143-"
+      },
+      "C#": {
+        "pattern": "x4354x",
+        "fingers": "-2143-"
+      },
+      "Cb": {
+        "pattern": "x2132x",
+        "fingers": "-2143-"
+      },
+      "D": {
+        "pattern": "x5465x",
+        "fingers": "-2143-"
+      },
+      "D#": {
+        "pattern": "x6576x",
+        "fingers": "-2143-"
+      },
+      "Db": {
+        "pattern": "x4354x",
+        "fingers": "-2143-"
+      },
+      "E": {
+        "pattern": "x7687x",
+        "fingers": "-2143-"
+      },
+      "E#": {
+        "pattern": "x8798x",
+        "fingers": "-2143-"
+      },
+      "Eb": {
+        "pattern": "x6576x",
+        "fingers": "-2143-"
+      },
+      "F": {
+        "pattern": "x8798x",
+        "fingers": "-2143-"
+      },
+      "F#": {
+        "pattern": "xx3324",
+        "fingers": "--2314"
+      },
+      "Fb": {
+        "pattern": "x7687x",
+        "fingers": "-2143-"
+      },
+      "G": {
+        "pattern": "xx4435",
+        "fingers": "--2314"
+      },
+      "G#": {
+        "pattern": "xx5546",
+        "fingers": "--2314"
+      },
+      "Gb": {
+        "pattern": "xx3324",
+        "fingers": "--2314"
+      },
+      "A": {
+        "pattern": "xx6657",
+        "fingers": "--2314"
+      },
+      "A#": {
+        "pattern": "xx7768",
+        "fingers": "--2314"
+      },
+      "Ab": {
+        "pattern": "xx5546",
+        "fingers": "--2314"
+      },
+      "B": {
+        "pattern": "x2132x",
+        "fingers": "-2143-"
+      },
+      "B#": {
+        "pattern": "x3243x",
+        "fingers": "-2143-"
+      },
+      "Bb": {
+        "pattern": "xx7768",
+        "fingers": "--2314"
+      }
+    },
+    "maj7#11": {
+      "C": {
+        "pattern": "x3445x",
+        "fingers": "-1234-"
+      },
+      "C#": {
+        "pattern": "x4556x",
+        "fingers": "-1234-"
+      },
+      "Cb": {
+        "pattern": "x2334x",
+        "fingers": "-1234-"
+      },
+      "D": {
+        "pattern": "x5667x",
+        "fingers": "-1234-"
+      },
+      "D#": {
+        "pattern": "x6778x",
+        "fingers": "-1234-"
+      },
+      "Db": {
+        "pattern": "x4556x",
+        "fingers": "-1234-"
+      },
+      "E": {
+        "pattern": "x7889x",
+        "fingers": "-1234-"
+      },
+      "E#": {
+        "pattern": "x-8-9-9-19-x",
+        "fingers": "-1234-"
+      },
+      "Eb": {
+        "pattern": "x6778x",
+        "fingers": "-1234-"
+      },
+      "F": {
+        "pattern": "x-8-9-9-10-x",
+        "fingers": "-1234-"
+      },
+      "F#": {
+        "pattern": "2x331x",
+        "fingers": "2-341-"
+      },
+      "Fb": {
+        "pattern": "x7889x",
+        "fingers": "-1234-"
+      },
+      "G": {
+        "pattern": "3x442x",
+        "fingers": "2-341-"
+      },
+      "G#": {
+        "pattern": "4x553x",
+        "fingers": "2-341-"
+      },
+      "Gb": {
+        "pattern": "2x331x",
+        "fingers": "2-341-"
+      },
+      "A": {
+        "pattern": "5x664x",
+        "fingers": "2-341-"
+      },
+      "A#": {
+        "pattern": "x1223x",
+        "fingers": "-1234-"
+      },
+      "Ab": {
+        "pattern": "4x553x",
+        "fingers": "2-341-"
+      },
+      "B": {
+        "pattern": "x2334x",
+        "fingers": "-1234-"
+      },
+      "B#": {
+        "pattern": "x3445x",
+        "fingers": "-1234-"
+      },
+      "Bb": {
+        "pattern": "x1223x",
+        "fingers": "-1234-"
+      }
+    },
+    "6": {
+      "C": {
+        "pattern": "x32210",
+        "fingers": "-4231-"
+      },
+      "C#": {
+        "pattern": "x4332x",
+        "fingers": "-4231-"
+      },
+      "Cb": {
+        "pattern": "7x687x",
+        "fingers": "2-143-"
+      },
+      "D": {
+        "pattern": "x5443x",
+        "fingers": "-4231-"
+      },
+      "D#": {
+        "pattern": "x6554x",
+        "fingers": "-4231-"
+      },
+      "Db": {
+        "pattern": "x4332x",
+        "fingers": "-4231-"
+      },
+      "E": {
+        "pattern": "022120",
+        "fingers": "-2314-"
+      },
+      "E#": {
+        "pattern": "xx3231",
+        "fingers": "--3241"
+      },
+      "Eb": {
+        "pattern": "x6554x",
+        "fingers": "-4231-"
+      },
+      "F": {
+        "pattern": "xx3231",
+        "fingers": "--3241"
+      },
+      "F#": {
+        "pattern": "2x132x",
+        "fingers": "2-143-"
+      },
+      "Fb": {
+        "pattern": "022120",
+        "fingers": "-2314-"
+      },
+      "G": {
+        "pattern": "320000",
+        "fingers": "21----"
+      },
+      "G#": {
+        "pattern": "4x354x",
+        "fingers": "2-143-"
+      },
+      "Gb": {
+        "pattern": "2x132x",
+        "fingers": "2-143-"
+      },
+      "A": {
+        "pattern": "x02222",
+        "fingers": "--1111"
+      },
+      "A#": {
+        "pattern": "6x576x",
+        "fingers": "2-143-"
+      },
+      "Ab": {
+        "pattern": "4x354x",
+        "fingers": "2-143-"
+      },
+      "B": {
+        "pattern": "7x687x",
+        "fingers": "2-143-"
+      },
+      "B#": {
+        "pattern": "x32210",
+        "fingers": "-4231-"
+      },
+      "Bb": {
+        "pattern": "6x576x",
+        "fingers": "2-143-"
+      }
+    },
+    "6add9": {
+      "C": {
+        "pattern": "x3223x",
+        "fingers": "-2113-"
+      },
+      "C#": {
+        "pattern": "x4334x",
+        "fingers": "-2113-"
+      },
+      "Cb": {
+        "pattern": "x2112x",
+        "fingers": "-2113-"
+      },
+      "D": {
+        "pattern": "x5445x",
+        "fingers": "-2113-"
+      },
+      "D#": {
+        "pattern": "x6556x",
+        "fingers": "-2113-"
+      },
+      "Db": {
+        "pattern": "x4334x",
+        "fingers": "-2113-"
+      },
+      "E": {
+        "pattern": "x7668x",
+        "fingers": "-2113-"
+      },
+      "E#": {
+        "pattern": "x8778x",
+        "fingers": "-2113-"
+      },
+      "Eb": {
+        "pattern": "x6556x",
+        "fingers": "-2113-"
+      },
+      "F": {
+        "pattern": "x8778x",
+        "fingers": "-2113-"
+      },
+      "F#": {
+        "pattern": "21112x",
+        "fingers": "21113-"
+      },
+      "Fb": {
+        "pattern": "x7667x",
+        "fingers": "-2113-"
+      },
+      "G": {
+        "pattern": "32223x",
+        "fingers": "21113-"
+      },
+      "G#": {
+        "pattern": "43334x",
+        "fingers": "21113-"
+      },
+      "Gb": {
+        "pattern": "21112x",
+        "fingers": "21113-"
+      },
+      "A": {
+        "pattern": "54445x",
+        "fingers": "21113-"
+      },
+      "A#": {
+        "pattern": "65556x",
+        "fingers": "21113-"
+      },
+      "Ab": {
+        "pattern": "43334x",
+        "fingers": "21113-"
+      },
+      "B": {
+        "pattern": "x2112x",
+        "fingers": "-2113-"
+      },
+      "B#": {
+        "pattern": "x3223x",
+        "fingers": "-2113-"
+      },
+      "Bb": {
+        "pattern": "65556x",
+        "fingers": "21113-"
+      }
+    },
+    "maj13": {
+      "C": {
+        "pattern": "x3x455",
+        "fingers": "-1-234"
+      },
+      "C#": {
+        "pattern": "x4x566",
+        "fingers": "-1-234"
+      },
+      "Cb": {
+        "pattern": "x2x344",
+        "fingers": "-1-234"
+      },
+      "D": {
+        "pattern": "x5x677",
+        "fingers": "-1-234"
+      },
+      "D#": {
+        "pattern": "x6x788",
+        "fingers": "-1-234"
+      },
+      "Db": {
+        "pattern": "x4x566",
+        "fingers": "-1-234"
+      },
+      "E": {
+        "pattern": "x7x899",
+        "fingers": "-1-234"
+      },
+      "E#": {
+        "pattern": "1x223x",
+        "fingers": "1-234-"
+      },
+      "Eb": {
+        "pattern": "x6x788",
+        "fingers": "-1-234"
+      },
+      "F": {
+        "pattern": "1x223x",
+        "fingers": "1-234-"
+      },
+      "F#": {
+        "pattern": "2x334x",
+        "fingers": "1-234-"
+      },
+      "Fb": {
+        "pattern": "x7x899",
+        "fingers": "-1-234"
+      },
+      "G": {
+        "pattern": "3x445x",
+        "fingers": "1-234-"
+      },
+      "G#": {
+        "pattern": "4x556x",
+        "fingers": "1-234-"
+      },
+      "Gb": {
+        "pattern": "2x334x",
+        "fingers": "1-234-"
+      },
+      "A": {
+        "pattern": "5x667x",
+        "fingers": "1-234-"
+      },
+      "A#": {
+        "pattern": "x1x233",
+        "fingers": "-1-234"
+      },
+      "Ab": {
+        "pattern": "4x556x",
+        "fingers": "1-234-"
+      },
+      "B": {
+        "pattern": "x2x344",
+        "fingers": "-1-234"
+      },
+      "B#": {
+        "pattern": "x3x455",
+        "fingers": "-1-234"
+      },
+      "Bb": {
+        "pattern": "x1x233",
+        "fingers": "-1-234"
+      }
+    },
+    "madd9": {
+      "C": {
+        "pattern": "x-x-10-8-8-10",
+        "fingers": "--3114"
+      },
+      "C#": {
+        "pattern": "x-x-11-9-9-11",
+        "fingers": "--3114"
+      },
+      "Cb": {
+        "pattern": "xx9779",
+        "fingers": "--3114"
+      },
+      "D": {
+        "pattern": "x-x-12-10-10-12",
+        "fingers": "--3114"
+      },
+      "D#": {
+        "pattern": "x-x-13-11-11-13",
+        "fingers": "--3114"
+      },
+      "Db": {
+        "pattern": "x-x-11-9-9-11",
+        "fingers": "--3114"
+      },
+      "E": {
+        "pattern": "022002",
+        "fingers": "-23--4"
+      },
+      "E#": {
+        "pattern": "xx3113",
+        "fingers": "--3114"
+      },
+      "Eb": {
+        "pattern": "x-x-13-11-11-13",
+        "fingers": "--3114"
+      },
+      "F": {
+        "pattern": "xx3113",
+        "fingers": "--3114"
+      },
+      "F#": {
+        "pattern": "xx4224",
+        "fingers": "--3114"
+      },
+      "Fb": {
+        "pattern": "022002",
+        "fingers": "-23--4"
+      },
+      "G": {
+        "pattern": "xx5335",
+        "fingers": "--3114"
+      },
+      "G#": {
+        "pattern": "xx6446",
+        "fingers": "--3114"
+      },
+      "Gb": {
+        "pattern": "xx4224",
+        "fingers": "--3114"
+      },
+      "A": {
+        "pattern": "xx7557",
+        "fingers": "--3114"
+      },
+      "A#": {
+        "pattern": "xx8668",
+        "fingers": "--3114"
+      },
+      "Ab": {
+        "pattern": "xx6446",
+        "fingers": "--3114"
+      },
+      "B": {
+        "pattern": "xx9779",
+        "fingers": "--3114"
+      },
+      "B#": {
+        "pattern": "x-x-10-8-8-10",
+        "fingers": "--3114"
+      },
+      "Bb": {
+        "pattern": "xx8668",
+        "fingers": "--3114"
+      }
+    },
+    "m11": {
+      "C": {
+        "pattern": "x3334x",
+        "fingers": "-1113-"
+      },
+      "C#": {
+        "pattern": "x4445x",
+        "fingers": "-1113-"
+      },
+      "Cb": {
+        "pattern": "7x775x",
+        "fingers": "2-341-"
+      },
+      "D": {
+        "pattern": "x5556x",
+        "fingers": "-1113-"
+      },
+      "D#": {
+        "pattern": "x6667x",
+        "fingers": "-1113-"
+      },
+      "Db": {
+        "pattern": "x4445x",
+        "fingers": "-1113-"
+      },
+      "E": {
+        "pattern": "x7778x",
+        "fingers": "-1113-"
+      },
+      "E#": {
+        "pattern": "x8889x",
+        "fingers": "-1113-"
+      },
+      "Eb": {
+        "pattern": "x6667x",
+        "fingers": "-1113-"
+      },
+      "F": {
+        "pattern": "x8889x",
+        "fingers": ""
+      },
+      "F#": {
+        "pattern": "x-9-9-9-10-x",
+        "fingers": "-1113-"
+      },
+      "Fb": {
+        "pattern": "x7778x",
+        "fingers": "-1113-"
+      },
+      "G": {
+        "pattern": "3x331x",
+        "fingers": "2-341-"
+      },
+      "G#": {
+        "pattern": "4x442x",
+        "fingers": "2-341-"
+      },
+      "Gb": {
+        "pattern": "x-9-9-9-10-x",
+        "fingers": "-1113-"
+      },
+      "A": {
+        "pattern": "5x553x",
+        "fingers": "2-341-"
+      },
+      "A#": {
+        "pattern": "6x664x",
+        "fingers": "2-341-"
+      },
+      "Ab": {
+        "pattern": "4x442x",
+        "fingers": "2-341-"
+      },
+      "B": {
+        "pattern": "7x775x",
+        "fingers": "2-341-"
+      },
+      "B#": {
+        "pattern": "x3334x",
+        "fingers": "-1113-"
+      },
+      "Bb": {
+        "pattern": "6x664x",
+        "fingers": "2-341-"
+      }
+    },
+    "mMaj7": {
+      "C": {
+        "pattern": "x35443",
+        "fingers": "-14231"
+      },
+      "C#": {
+        "pattern": "x46554",
+        "fingers": "-14231"
+      },
+      "Cb": {
+        "pattern": "x24332",
+        "fingers": "-14231"
+      },
+      "D": {
+        "pattern": "x57665",
+        "fingers": "-14231"
+      },
+      "D#": {
+        "pattern": "x68776",
+        "fingers": "-14231"
+      },
+      "Db": {
+        "pattern": "x46554",
+        "fingers": "-14231"
+      },
+      "E": {
+        "pattern": "x79887",
+        "fingers": "-14231"
+      },
+      "E#": {
+        "pattern": "x79887",
+        "fingers": "-14231"
+      },
+      "Eb": {
+        "pattern": "x68776",
+        "fingers": "-14231"
+      },
+      "F": {
+        "pattern": "x79887",
+        "fingers": "-14231"
+      },
+      "F#": {
+        "pattern": "243222",
+        "fingers": "132111"
+      },
+      "Fb": {
+        "pattern": "x79887",
+        "fingers": "-14231"
+      },
+      "G": {
+        "pattern": "354333",
+        "fingers": "132111"
+      },
+      "G#": {
+        "pattern": "465444",
+        "fingers": "132111"
+      },
+      "Gb": {
+        "pattern": "243222",
+        "fingers": "132111"
+      },
+      "A": {
+        "pattern": "576555",
+        "fingers": "132111"
+      },
+      "A#": {
+        "pattern": "x13221",
+        "fingers": "-14231"
+      },
+      "Ab": {
+        "pattern": "465444",
+        "fingers": "132111"
+      },
+      "B": {
+        "pattern": "x24332",
+        "fingers": "-14231"
+      },
+      "B#": {
+        "pattern": "x35443",
+        "fingers": "-14231"
+      },
+      "Bb": {
+        "pattern": "x13221",
+        "fingers": "-14231"
+      }
+    },
+    "m9": {
+      "C": {
+        "pattern": "x3133x",
+        "fingers": "-2134-"
+      },
+      "C#": {
+        "pattern": "x4244x",
+        "fingers": "-2134-"
+      },
+      "Cb": {
+        "pattern": "xx7779",
+        "fingers": "--1114"
+      },
+      "D": {
+        "pattern": "x5355x",
+        "fingers": "-2134-"
+      },
+      "D#": {
+        "pattern": "x6466x",
+        "fingers": "-2134-"
+      },
+      "Db": {
+        "pattern": "x4244x",
+        "fingers": "-2134-"
+      },
+      "E": {
+        "pattern": "x7577x",
+        "fingers": "-2134-"
+      },
+      "E#": {
+        "pattern": "xx1113",
+        "fingers": "--1114"
+      },
+      "Eb": {
+        "pattern": "x6466x",
+        "fingers": "-2134-"
+      },
+      "F": {
+        "pattern": "xx1113",
+        "fingers": "--1114"
+      },
+      "F#": {
+        "pattern": "xx2224",
+        "fingers": "--1114"
+      },
+      "Fb": {
+        "pattern": "x7577x",
+        "fingers": "-2134-"
+      },
+      "G": {
+        "pattern": "xx3335",
+        "fingers": "--1114"
+      },
+      "G#": {
+        "pattern": "xx4446",
+        "fingers": "--1114"
+      },
+      "Gb": {
+        "pattern": "xx2224",
+        "fingers": "--1114"
+      },
+      "A": {
+        "pattern": "xx5557",
+        "fingers": "--1114"
+      },
+      "A#": {
+        "pattern": "xx6668",
+        "fingers": "--1114"
+      },
+      "Ab": {
+        "pattern": "xx4446",
+        "fingers": "--1114"
+      },
+      "B": {
+        "pattern": "xx7779",
+        "fingers": "--1113"
+      },
+      "B#": {
+        "pattern": "x3133x",
+        "fingers": "-2134-"
+      },
+      "Bb": {
+        "pattern": "xx6668",
+        "fingers": "--1114"
+      }
+    },
+    "m7b5": {
+      "C": {
+        "pattern": "x3434x",
+        "fingers": "-1324-"
+      },
+      "C#": {
+        "pattern": "x4545x",
+        "fingers": "-1324-"
+      },
+      "Cb": {
+        "pattern": "x2323x",
+        "fingers": "-1324-"
+      },
+      "D": {
+        "pattern": "x5656x",
+        "fingers": "-1324-"
+      },
+      "D#": {
+        "pattern": "x6767x",
+        "fingers": "-1324-"
+      },
+      "Db": {
+        "pattern": "x4545x",
+        "fingers": "-1324-"
+      },
+      "E": {
+        "pattern": "x7878x",
+        "fingers": "-1324-"
+      },
+      "E#": {
+        "pattern": "x8989x",
+        "fingers": "-1324-"
+      },
+      "Eb": {
+        "pattern": "x6767x",
+        "fingers": "-1324-"
+      },
+      "F": {
+        "pattern": "x8989x",
+        "fingers": "-1324-"
+      },
+      "F#": {
+        "pattern": "2x221x",
+        "fingers": "2-341-"
+      },
+      "Fb": {
+        "pattern": "x7878x",
+        "fingers": "-1324-"
+      },
+      "G": {
+        "pattern": "3x332x",
+        "fingers": "2-341-"
+      },
+      "G#": {
+        "pattern": "4x443x",
+        "fingers": "2-341-"
+      },
+      "Gb": {
+        "pattern": "2x221x",
+        "fingers": "2-341-"
+      },
+      "A": {
+        "pattern": "5x554x",
+        "fingers": "2-341-"
+      },
+      "A#": {
+        "pattern": "x1212x",
+        "fingers": "-1324-"
+      },
+      "Ab": {
+        "pattern": "4x443x",
+        "fingers": "2-341-"
+      },
+      "B": {
+        "pattern": "x2323x",
+        "fingers": "-1324-"
+      },
+      "B#": {
+        "pattern": "x3434x",
+        "fingers": "-1324-"
+      },
+      "Bb": {
+        "pattern": "x1212x",
+        "fingers": "-1324-"
+      }
+    },
+    "m6": {
+      "C": {
+        "pattern": "x3121x",
+        "fingers": "-3121-"
+      },
+      "C#": {
+        "pattern": "x4232x",
+        "fingers": "-3121-"
+      },
+      "Cb": {
+        "pattern": "7x677x",
+        "fingers": "2-134-"
+      },
+      "D": {
+        "pattern": "x5343x",
+        "fingers": "-3121-"
+      },
+      "D#": {
+        "pattern": "x6454x",
+        "fingers": "-3121-"
+      },
+      "Db": {
+        "pattern": "x4232x",
+        "fingers": "-3121-"
+      },
+      "E": {
+        "pattern": "022020",
+        "fingers": "-23-4-"
+      },
+      "E#": {
+        "pattern": "xx3131",
+        "fingers": "--3141"
+      },
+      "Eb": {
+        "pattern": "x6454x",
+        "fingers": "-3121-"
+      },
+      "F": {
+        "pattern": "xx3131",
+        "fingers": "--3141"
+      },
+      "F#": {
+        "pattern": "2x122x",
+        "fingers": "2-134-"
+      },
+      "Fb": {
+        "pattern": "022020",
+        "fingers": "-23-4-"
+      },
+      "G": {
+        "pattern": "3x233x",
+        "fingers": "2-134-"
+      },
+      "G#": {
+        "pattern": "4x344x",
+        "fingers": "2-134-"
+      },
+      "Gb": {
+        "pattern": "2x122x",
+        "fingers": "2-134-"
+      },
+      "A": {
+        "pattern": "x02212",
+        "fingers": "--2314"
+      },
+      "A#": {
+        "pattern": "6x566x",
+        "fingers": "2-134-"
+      },
+      "Ab": {
+        "pattern": "4x344x",
+        "fingers": "2-134-"
+      },
+      "B": {
+        "pattern": "7x677x",
+        "fingers": "2-134-"
+      },
+      "B#": {
+        "pattern": "x3121x",
+        "fingers": "-3121-"
+      },
+      "Bb": {
+        "pattern": "6x566x",
+        "fingers": "2-134-"
+      }
+    },
+    "m13": {
+      "C": {
+        "pattern": "x3x345",
+        "fingers": "-1-234"
+      },
+      "C#": {
+        "pattern": "x4x456",
+        "fingers": "-1-234"
+      },
+      "Cb": {
+        "pattern": "x2x234",
+        "fingers": "-1-234"
+      },
+      "D": {
+        "pattern": "x5x567",
+        "fingers": "-1-234"
+      },
+      "D#": {
+        "pattern": "x6x678",
+        "fingers": "-1-234"
+      },
+      "Db": {
+        "pattern": "x4x456",
+        "fingers": "-1-234"
+      },
+      "E": {
+        "pattern": "x7x789",
+        "fingers": "-1-234"
+      },
+      "E#": {
+        "pattern": "x-8-x-8-9-10",
+        "fingers": "-1-234"
+      },
+      "Eb": {
+        "pattern": "x6x678",
+        "fingers": "-1-234"
+      },
+      "F": {
+        "pattern": "x-8-x-8-9-10",
+        "fingers": "-1-234"
+      },
+      "F#": {
+        "pattern": "2x224x",
+        "fingers": "1-234-"
+      },
+      "Fb": {
+        "pattern": "x7x789",
+        "fingers": "-1-234"
+      },
+      "G": {
+        "pattern": "3x335x",
+        "fingers": "1-234-"
+      },
+      "G#": {
+        "pattern": "4x446x",
+        "fingers": "1-234-"
+      },
+      "Gb": {
+        "pattern": "2x224x",
+        "fingers": "1-234-"
+      },
+      "A": {
+        "pattern": "5x557x",
+        "fingers": "1-234-"
+      },
+      "A#": {
+        "pattern": "x1x123",
+        "fingers": "-1-234"
+      },
+      "Ab": {
+        "pattern": "4x446x",
+        "fingers": "1-234-"
+      },
+      "B": {
+        "pattern": "x2x234",
+        "fingers": "-1-234"
+      },
+      "B#": {
+        "pattern": "x3x345",
+        "fingers": "-1-234"
+      },
+      "Bb": {
+        "pattern": "x1x234",
+        "fingers": "-1-234"
+      }
+    },
+    "maj7b5": {
+      "C": {
+        "pattern": "x3445x",
+        "fingers": "-1234-"
+      },
+      "C#": {
+        "pattern": "x4556x",
+        "fingers": "-1234-"
+      },
+      "Cb": {
+        "pattern": "7x886x",
+        "fingers": "2-341-"
+      },
+      "D": {
+        "pattern": "xx0122",
+        "fingers": "---123"
+      },
+      "D#": {
+        "pattern": "xx1233",
+        "fingers": "--1234"
+      },
+      "Db": {
+        "pattern": "x4556x",
+        "fingers": "-1234-"
+      },
+      "E": {
+        "pattern": "xx2344",
+        "fingers": "--1234"
+      },
+      "E#": {
+        "pattern": "xx3200",
+        "fingers": "--21--"
+      },
+      "Eb": {
+        "pattern": "xx1233",
+        "fingers": "--1234"
+      },
+      "F": {
+        "pattern": "xx3200",
+        "fingers": "--21--"
+      },
+      "F#": {
+        "pattern": "2x331x",
+        "fingers": "2-341-"
+      },
+      "Fb": {
+        "pattern": "xx2344",
+        "fingers": "--1234"
+      },
+      "G": {
+        "pattern": "3x442x",
+        "fingers": "2-341-"
+      },
+      "G#": {
+        "pattern": "4x553x",
+        "fingers": "2-341-"
+      },
+      "Gb": {
+        "pattern": "2x331x",
+        "fingers": "2-341-"
+      },
+      "A": {
+        "pattern": "5x664x",
+        "fingers": "2-341-"
+      },
+      "A#": {
+        "pattern": "6x775x",
+        "fingers": "2-341-"
+      },
+      "Ab": {
+        "pattern": "4x553x",
+        "fingers": "2-341-"
+      },
+      "B": {
+        "pattern": "7x886x",
+        "fingers": "2-341-"
+      },
+      "B#": {
+        "pattern": "x3445x",
+        "fingers": "-1234-"
+      },
+      "Bb": {
+        "pattern": "6x775x",
+        "fingers": "2-341-"
+      }
+    },
+    "maj7#5": {
+      "C": {
+        "pattern": "x32100",
+        "fingers": "-321--"
+      },
+      "C#": {
+        "pattern": "x4321x",
+        "fingers": "-4321-"
+      },
+      "Cb": {
+        "pattern": "x2x343",
+        "fingers": "-1-243"
+      },
+      "D": {
+        "pattern": "xx0322",
+        "fingers": "---211"
+      },
+      "D#": {
+        "pattern": "x6543x",
+        "fingers": "-4321-"
+      },
+      "Db": {
+        "pattern": "x4321x",
+        "fingers": "-4321-"
+      },
+      "E": {
+        "pattern": "x7654x",
+        "fingers": "-4321-"
+      },
+      "E#": {
+        "pattern": "xx3220",
+        "fingers": "--312-"
+      },
+      "Eb": {
+        "pattern": "x6543x",
+        "fingers": "-4321-"
+      },
+      "F": {
+        "pattern": "xx3220",
+        "fingers": "--312-"
+      },
+      "F#": {
+        "pattern": "2x333x",
+        "fingers": "1-234-"
+      },
+      "Fb": {
+        "pattern": "x7654",
+        "fingers": "-4321-"
+      },
+      "G": {
+        "pattern": "3x444x",
+        "fingers": "1-234-"
+      },
+      "G#": {
+        "pattern": "4x555x",
+        "fingers": "1-234-"
+      },
+      "Gb": {
+        "pattern": "2x333x",
+        "fingers": "1-234-"
+      },
+      "A": {
+        "pattern": "x0312x",
+        "fingers": "--312-"
+      },
+      "A#": {
+        "pattern": "x1x232",
+        "fingers": "-1-243"
+      },
+      "Ab": {
+        "pattern": "4x555x",
+        "fingers": "1-234-"
+      },
+      "B": {
+        "pattern": "x2x343",
+        "fingers": "-1-243"
+      },
+      "B#": {
+        "pattern": "x32100",
+        "fingers": "-321--"
+      },
+      "Bb": {
+        "pattern": "x1x232",
+        "fingers": "-1-243"
+      }
+    },
+    "7#11": {
+      "C": {
+        "pattern": "x32332",
+        "fingers": "-21341"
+      },
+      "C#": {
+        "pattern": "x43443",
+        "fingers": "-21341"
+      },
+      "Cb": {
+        "pattern": "x21221",
+        "fingers": "-21341"
+      },
+      "D": {
+        "pattern": "x54554",
+        "fingers": "-21341"
+      },
+      "D#": {
+        "pattern": "x65665",
+        "fingers": "-21341"
+      },
+      "Db": {
+        "pattern": "x43443",
+        "fingers": "-21341"
+      },
+      "E": {
+        "pattern": "xx6776",
+        "fingers": "--1231"
+      },
+      "E#": {
+        "pattern": "1x120x",
+        "fingers": "1-23--"
+      },
+      "Eb": {
+        "pattern": "x65665",
+        "fingers": "-21341"
+      },
+      "F": {
+        "pattern": "1x120x",
+        "fingers": "1-23--"
+      },
+      "F#": {
+        "pattern": "2x231x",
+        "fingers": "2-341-"
+      },
+      "Fb": {
+        "pattern": "xx6776",
+        "fingers": "--1231"
+      },
+      "G": {
+        "pattern": "3x342x",
+        "fingers": "2-341-"
+      },
+      "G#": {
+        "pattern": "4x453x",
+        "fingers": "2-341-"
+      },
+      "Gb": {
+        "pattern": "2x231x",
+        "fingers": "2-341-"
+      },
+      "A": {
+        "pattern": "5x564x",
+        "fingers": "2-341-"
+      },
+      "A#": {
+        "pattern": "x10110",
+        "fingers": "-1-23-"
+      },
+      "Ab": {
+        "pattern": "4x453x",
+        "fingers": "2-341-"
+      },
+      "B": {
+        "pattern": "x21221",
+        "fingers": "-21341"
+      },
+      "B#": {
+        "pattern": "x32332",
+        "fingers": "-21341"
+      },
+      "Bb": {
+        "pattern": "x10110",
+        "fingers": "1-23-"
+      }
+    },
+    "7add4": {
+      "C": {
+        "pattern": "x33320",
+        "fingers": "-2341-"
+      },
+      "C#": {
+        "pattern": "x44464",
+        "fingers": "-11131"
+      },
+      "Cb": {
+        "pattern": "x2424x",
+        "fingers": "-1324-"
+      },
+      "D": {
+        "pattern": "xx0012",
+        "fingers": "----12"
+      },
+      "D#": {
+        "pattern": "xx1123",
+        "fingers": "--1123"
+      },
+      "Db": {
+        "pattern": "x44464",
+        "fingers": "-11131"
+      },
+      "E": {
+        "pattern": "x2x2x4",
+        "fingers": "-1-2-3"
+      },
+      "E#": {
+        "pattern": "xx3345",
+        "fingers": "--1123"
+      },
+      "Eb": {
+        "pattern": "xx1123",
+        "fingers": "--1123"
+      },
+      "F": {
+        "pattern": "xx3345",
+        "fingers": "--1123"
+      },
+      "F#": {
+        "pattern": "2443xx",
+        "fingers": "1342--"
+      },
+      "Fb": {
+        "pattern": "x2x2x4",
+        "fingers": "-1-2-3"
+      },
+      "G": {
+        "pattern": "3x341x",
+        "fingers": "2-341-"
+      },
+      "G#": {
+        "pattern": "4x452x",
+        "fingers": "2-341-"
+      },
+      "Gb": {
+        "pattern": "2443xx",
+        "fingers": "1342--"
+      },
+      "A": {
+        "pattern": "xx563x",
+        "fingers": "--231-"
+      },
+      "A#": {
+        "pattern": "6x674x",
+        "fingers": "2-341-"
+      },
+      "Ab": {
+        "pattern": "4x452x",
+        "fingers": "2-341-"
+      },
+      "B": {
+        "pattern": "x2424x",
+        "fingers": "-1324-"
+      },
+      "B#": {
+        "pattern": "x33310",
+        "fingers": "-2341-"
+      },
+      "Bb": {
+        "pattern": "6x674x",
+        "fingers": "2-341-"
+      }
+    },
+    "mMaj9": {
+      "C": {
+        "pattern": "x3143x",
+        "fingers": "-2143-"
+      },
+      "C#": {
+        "pattern": "x4254x",
+        "fingers": "-2143-"
+      },
+      "Cb": {
+        "pattern": "x2032x",
+        "fingers": "-1-32-"
+      },
+      "D": {
+        "pattern": "x5365x",
+        "fingers": "-2143-"
+      },
+      "D#": {
+        "pattern": "x6476x",
+        "fingers": "-2143-"
+      },
+      "Db": {
+        "pattern": "x4254x",
+        "fingers": "-2143-"
+      },
+      "E": {
+        "pattern": "021002",
+        "fingers": "-21--3"
+      },
+      "E#": {
+        "pattern": "132113",
+        "fingers": "132114"
+      },
+      "Eb": {
+        "pattern": "x6476x",
+        "fingers": "-2143-"
+      },
+      "F": {
+        "pattern": "132113",
+        "fingers": "132114"
+      },
+      "F#": {
+        "pattern": "243224",
+        "fingers": "132114"
+      },
+      "Fb": {
+        "pattern": "021002",
+        "fingers": "-21--3"
+      },
+      "G": {
+        "pattern": "354335",
+        "fingers": "132114"
+      },
+      "G#": {
+        "pattern": "465446",
+        "fingers": "132114"
+      },
+      "Gb": {
+        "pattern": "243224",
+        "fingers": "132114"
+      },
+      "A": {
+        "pattern": "xx65xx",
+        "fingers": "--21--"
+      },
+      "A#": {
+        "pattern": "687668",
+        "fingers": "132114"
+      },
+      "Ab": {
+        "pattern": "465446",
+        "fingers": "132114"
+      },
+      "B": {
+        "pattern": "x2032x",
+        "fingers": "-1-32-"
+      },
+      "B#": {
+        "pattern": "x3143-",
+        "fingers": "-2143-"
+      },
+      "Bb": {
+        "pattern": "687668",
+        "fingers": "132114"
+      }
+    },
+    "m6add9": {
+      "C": {
+        "pattern": "x3123x",
+        "fingers": "-3124-"
+      },
+      "C#": {
+        "pattern": "x4234x",
+        "fingers": "-3124-"
+      },
+      "Cb": {
+        "pattern": "x2012x",
+        "fingers": "-2-13-"
+      },
+      "D": {
+        "pattern": "x5345x",
+        "fingers": "-3124-"
+      },
+      "D#": {
+        "pattern": "x6456x",
+        "fingers": "-3124-"
+      },
+      "Db": {
+        "pattern": "x4234x",
+        "fingers": "-3124-"
+      },
+      "E": {
+        "pattern": "xx2022",
+        "fingers": "--1-23"
+      },
+      "E#": {
+        "pattern": "xx3133",
+        "fingers": "--2134"
+      },
+      "Eb": {
+        "pattern": "x6456x",
+        "fingers": "-3124-"
+      },
+      "F": {
+        "pattern": "xx3122",
+        "fingers": "--2134"
+      },
+      "F#": {
+        "pattern": "xx4244",
+        "fingers": "--2134"
+      },
+      "Fb": {
+        "pattern": "xx2022",
+        "fingers": "--1-23"
+      },
+      "G": {
+        "pattern": "xx5355",
+        "fingers": "--2134"
+      },
+      "G#": {
+        "pattern": "xx6466",
+        "fingers": "--2134"
+      },
+      "Gb": {
+        "pattern": "xx4244",
+        "fingers": "2134"
+      },
+      "A": {
+        "pattern": "xx45xx",
+        "fingers": "--12--"
+      },
+      "A#": {
+        "pattern": "xx8688",
+        "fingers": "--2134"
+      },
+      "Ab": {
+        "pattern": "xx6466",
+        "fingers": "--2134"
+      },
+      "B": {
+        "pattern": "x2012x",
+        "fingers": "-2-13-"
+      },
+      "B#": {
+        "pattern": "x3123x",
+        "fingers": "-3124-"
+      },
+      "Bb": {
+        "pattern": "xx8688",
+        "fingers": "--2134"
+      }
+    },
+    "9sus4": {
+      "C": {
+        "pattern": "x33333",
+        "fingers": "-11111"
+      },
+      "C#": {
+        "pattern": "x44444",
+        "fingers": "-11111"
+      },
+      "Cb": {
+        "pattern": "x22222",
+        "fingers": "-11111"
+      },
+      "D": {
+        "pattern": "xx0010",
+        "fingers": "----1-"
+      },
+      "D#": {
+        "pattern": "xx1121",
+        "fingers": "--1121"
+      },
+      "Db": {
+        "pattern": "x44444",
+        "fingers": "-11111"
+      },
+      "E": {
+        "pattern": "xx2232",
+        "fingers": "--1121"
+      },
+      "E#": {
+        "pattern": "xx3343",
+        "fingers": "--1121"
+      },
+      "Eb": {
+        "pattern": "xx1121",
+        "fingers": "--1121"
+      },
+      "F": {
+        "pattern": "xx3343",
+        "fingers": "--1121"
+      },
+      "F#": {
+        "pattern": "2x2100",
+        "fingers": "2-31--"
+      },
+      "Fb": {
+        "pattern": "xx2232",
+        "fingers": "--1121"
+      },
+      "G": {
+        "pattern": "3x321x",
+        "fingers": "3-421-"
+      },
+      "G#": {
+        "pattern": "4x432x",
+        "fingers": "3-421-"
+      },
+      "Gb": {
+        "pattern": "2x2100",
+        "fingers": "2-31--"
+      },
+      "A": {
+        "pattern": "5x543x",
+        "fingers": "3-421-"
+      },
+      "A#": {
+        "pattern": "x11111",
+        "fingers": "-11111"
+      },
+      "Ab": {
+        "pattern": "4x432x",
+        "fingers": "3-421-"
+      },
+      "B": {
+        "pattern": "x22222",
+        "fingers": "-11111"
+      },
+      "B#": {
+        "pattern": "x33333",
+        "fingers": "-11111"
+      },
+      "Bb": {
+        "pattern": "x11111",
+        "fingers": "-11111"
+      }
+    },
+    "add4": {
+      "C": {
+        "pattern": "x33010",
+        "fingers": "-23-1-"
+      },
+      "C#": {
+        "pattern": "x44664",
+        "fingers": "-11231"
+      },
+      "Cb": {
+        "pattern": "x2444x",
+        "fingers": "-1234-"
+      },
+      "D": {
+        "pattern": "x54x35",
+        "fingers": "-32-14"
+      },
+      "D#": {
+        "pattern": "x66886",
+        "fingers": "-11231"
+      },
+      "Db": {
+        "pattern": "x44664",
+        "fingers": "-11231"
+      },
+      "E": {
+        "pattern": "xx22x4",
+        "fingers": "--12-3"
+      },
+      "E#": {
+        "pattern": "xx3315",
+        "fingers": "--2314"
+      },
+      "Eb": {
+        "pattern": "x66886",
+        "fingers": "-11231"
+      },
+      "F": {
+        "pattern": "xx3315",
+        "fingers": "--2314"
+      },
+      "F#": {
+        "pattern": "xx43x2",
+        "fingers": "--32-1"
+      },
+      "Fb": {
+        "pattern": "xx22x4",
+        "fingers": "--12-3"
+      },
+      "G": {
+        "pattern": "xx55x3",
+        "fingers": "--23-1"
+      },
+      "G#": {
+        "pattern": "xx6648",
+        "fingers": "--2314"
+      },
+      "Gb": {
+        "pattern": "xx43x2",
+        "fingers": "--32-1"
+      },
+      "A": {
+        "pattern": "xxx635",
+        "fingers": "---312"
+      },
+      "A#": {
+        "pattern": "x11331",
+        "fingers": "-11231"
+      },
+      "Ab": {
+        "pattern": "xx6648",
+        "fingers": "--2314"
+      },
+      "B": {
+        "pattern": "x2444x",
+        "fingers": "-1234-"
+      },
+      "B#": {
+        "pattern": "x33010",
+        "fingers": "-23-1-"
+      },
+      "Bb": {
+        "pattern": "x11331",
+        "fingers": "-11231"
+      }
+    }
+  }
+}
