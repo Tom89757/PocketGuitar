@@ -23,6 +23,10 @@ captures/
 .externalNativeBuild/
 .cxx/
 
+# APK 解包残留（非源码，不参与构建）
+app/src/main/META-INF/
+app/src/main/kotlin/
+
 # OS
 .DS_Store
 Thumbs.db
