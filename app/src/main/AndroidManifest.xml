@@ -17,6 +17,7 @@
         android:dataExtractionRules="@xml/data_extraction_rules">
         <activity
             android:name="com.example.pocketguitar.ChordPanelActivity"
+            android:configChanges="orientation|screenSize|screenLayout|smallestScreenSize|density|uiMode|keyboardHidden|navigation"
             android:exported="true"
             android:screenOrientation="landscape">
             <intent-filter>
@@ -30,6 +31,7 @@
             android:screenOrientation="landscape"/>
         <activity
             android:name="com.example.pocketguitar.FingerstyleActivity"
+            android:configChanges="orientation|screenSize|screenLayout|smallestScreenSize|density|uiMode|keyboardHidden|navigation"
             android:exported="false"
             android:screenOrientation="landscape"/>
         <activity

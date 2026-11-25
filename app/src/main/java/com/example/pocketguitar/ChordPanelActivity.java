@@ -56,6 +56,10 @@ public class ChordPanelActivity extends AppCompatActivity implements SharedChord
     private TextView tvPlayingNote;
     private TextView btnPausePlayback;
     private PausableScheduler playbackScheduler;
+    /** 是否正处于曲谱弹奏按钮模式（右下角显示曲谱和弦而非用户和弦）。 */
+    private boolean songChordButtonsActive = false;
+    /** 上一次生效的屏幕密度，用于识别系统重置密度后重建按钮。 */
+    private float lastDensity = 0f;
     private final String TAG = "ChordPanelActivity";
     private final List<String> rhythmList = new ArrayList();
     private String currentPlayRoot = "";
@@ -86,6 +90,7 @@ public class ChordPanelActivity extends AppCompatActivity implements SharedChord
         this.playbackScheduler.setOnFinishListener(() -> {
             this.btnPausePlayback.setText("暂停");
             this.btnPausePlayback.setVisibility(View.GONE);
+            restoreUserChordButtons();
         });
         this.btnPausePlayback.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -453,8 +458,28 @@ public class ChordPanelActivity extends AppCompatActivity implements SharedChord
     }
 
     @Override
+    public void onConfigurationChanged(android.content.res.Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        // 配置变化后系统会按物理密度重算 DisplayMetrics，需要重新适配
+        ScreenAdapt.adapt(this);
+        float density = getResources().getDisplayMetrics().density;
+        if (lastDensity > 0f && Math.abs(density - lastDensity) > 0.01f && !songChordButtonsActive) {
+            createChordButtons();
+        }
+        lastDensity = density;
+    }
+
+    @Override
     protected void onResume() {
         super.onResume();
+        // 从其它页面切回时系统可能已按物理密度重置了 DisplayMetrics，
+        // 需要重新适配，否则本页 dp 尺寸（如和弦按钮）会比正常进入时偏大
+        ScreenAdapt.adapt(this);
+        float density = getResources().getDisplayMetrics().density;
+        if (lastDensity > 0f && Math.abs(density - lastDensity) > 0.01f && !songChordButtonsActive) {
+            createChordButtons();
+        }
+        lastDensity = density;
         SongPlaybackManager manager = SongPlaybackManager.getInstance();
         int mode = manager.takeMode();
         if (mode != SongPlaybackManager.MODE_CHORDS && mode != SongPlaybackManager.MODE_BOTH) {
@@ -556,6 +581,9 @@ public class ChordPanelActivity extends AppCompatActivity implements SharedChord
         if (names.isEmpty()) {
             return;
         }
+        // 右下角按钮切换为当前曲谱的和弦列表
+        createPlaybackChordButtons(names);
+        songChordButtonsActive = true;
         int beatMs = song.bpm > 0 ? 60000 / song.bpm : 500;
         long chordDuration = beatMs * 4L;
         for (int i = 0; i < names.size(); i++) {
@@ -581,6 +609,9 @@ public class ChordPanelActivity extends AppCompatActivity implements SharedChord
             ChordFingering fingering = new ChordFingering(
                     json.getString("pattern"), json.getString("fingers"));
             displayAndStrum(fingering);
+            if (songChordButtonsActive) {
+                highlightPlaybackChordByName(name);
+            }
         } catch (JSONException ignored) {
         }
     }
@@ -608,6 +639,109 @@ public class ChordPanelActivity extends AppCompatActivity implements SharedChord
         }
     }
 
+    /** 用曲谱和弦列表替换右下角按钮组（去重、最多 8 个）。 */
+    private void createPlaybackChordButtons(List<String> names) {
+        this.chordButtonsGroup.removeAllViews();
+        List<String> unique = new ArrayList<>();
+        for (String name : names) {
+            if (name != null && !name.trim().isEmpty() && !unique.contains(name)) {
+                unique.add(name);
+            }
+        }
+        int index = 0;
+        for (String name : unique) {
+            if (index >= this.chordBackground.length) {
+                break;
+            }
+            String[] ref = ChordResolver.resolve(name);
+            if (ref == null) {
+                continue;
+            }
+            final String root = ref[0];
+            final String type = ref[1];
+            int backgroundIndex = index % this.chordBackground.length;
+            final Button button = new Button(this);
+            button.setId(View.generateViewId());
+            // 与用户和弦按钮保持一致：根音大字号 + 类型小字号，避免无后缀和弦显示偏小
+            String formattedRoot = root.replace("b", "♭").replace("#", "♯");
+            String displayText = formattedRoot + "\n" + type;
+            SpannableString spannable = new SpannableString(displayText);
+            spannable.setSpan(new RelativeSizeSpan(1.5f), 0, formattedRoot.length(), 0);
+            spannable.setSpan(new RelativeSizeSpan(0.7f), formattedRoot.length() + 1, displayText.length(), 0);
+            button.setText(spannable);
+            button.setLineSpacing(-8.0f, 1.0f);
+            button.setTextSize(2, 16.0f);
+            button.setTextColor(-1);
+            button.setGravity(17);
+            button.setPadding(0, -8, 0, 12);
+            button.setAllCaps(false);
+            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
+                    getResources().getDimensionPixelSize(R.dimen.dp_60),
+                    getResources().getDimensionPixelSize(R.dimen.dp_60));
+            params.setMargins(4, 4, 4, 4);
+            button.setLayoutParams(params);
+            button.setBackground(getResources().getDrawable(this.chordBackground[backgroundIndex]));
+            button.setTag(name);
+            button.setTag(R.id.tag_background_index, Integer.valueOf(backgroundIndex));
+            button.setTag(R.id.tag_selected, false);
+            button.setOnClickListener(v -> {
+                highlightChordButton(button);
+                handleChordSelection(root, type);
+            });
+            this.chordButtonsGroup.addView(button);
+            index++;
+        }
+    }
+
+    /** 高亮指定按钮，取消其它按钮的选中态。 */
+    private void highlightChordButton(Button target) {
+        for (int j = 0; j < this.chordButtonsGroup.getChildCount(); j++) {
+            View child = this.chordButtonsGroup.getChildAt(j);
+            if (child instanceof Button) {
+                Button b = (Button) child;
+                int savedIndex = ((Integer) b.getTag(R.id.tag_background_index)).intValue();
+                b.setBackground(getResources().getDrawable(this.chordBackground[savedIndex]));
+                b.setTag(R.id.tag_selected, false);
+            }
+        }
+        target.setBackground(getResources().getDrawable(R.drawable.chord_press));
+        target.setTag(R.id.tag_selected, true);
+    }
+
+    /** 弹奏到某和弦时，高亮右下角对应的曲谱和弦按钮。 */
+    private void highlightPlaybackChordByName(String name) {
+        for (int j = 0; j < this.chordButtonsGroup.getChildCount(); j++) {
+            View child = this.chordButtonsGroup.getChildAt(j);
+            if (child instanceof Button && name.equals(child.getTag())) {
+                highlightChordButton((Button) child);
+                return;
+            }
+        }
+    }
+
+    /** 弹奏结束或离开页面时，恢复用户自己的和弦按钮列表。 */
+    private void restoreUserChordButtons() {
+        if (!songChordButtonsActive) {
+            return;
+        }
+        songChordButtonsActive = false;
+        createChordButtons();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        // 弹奏中离开页面：中止并恢复用户和弦按钮，避免切回后残留曲谱和弦列表
+        if (this.playbackScheduler != null && this.playbackScheduler.isActive()) {
+            this.playbackScheduler.clear();
+            if (this.btnPausePlayback != null) {
+                this.btnPausePlayback.setText("暂停");
+                this.btnPausePlayback.setVisibility(View.GONE);
+            }
+            restoreUserChordButtons();
+        }
+    }
+
     @Override // androidx.appcompat.app.AppCompatActivity, androidx.fragment.app.FragmentActivity, android.app.Activity
     protected void onDestroy() {
         this.sharedChordManager.removeChangeListener(this);
@@ -625,7 +759,10 @@ public class ChordPanelActivity extends AppCompatActivity implements SharedChord
         runOnUiThread(new Runnable() { // from class: com.example.pocketguitar.ChordPanelActivity$$ExternalSyntheticLambda10
             @Override // java.lang.Runnable
             public final void run() {
-                ChordPanelActivity.this.createChordButtons();
+                // 曲谱弹奏中不覆盖右下角的曲谱和弦按钮
+                if (!ChordPanelActivity.this.songChordButtonsActive) {
+                    ChordPanelActivity.this.createChordButtons();
+                }
             }
         });
     }

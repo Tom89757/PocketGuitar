@@ -98,6 +98,8 @@ public class FingerstyleActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
+        // 从其它页面切回时系统可能重置了密度，重新适配保证 dp 尺寸一致
+        ScreenAdapt.adapt(this);
         SongPlaybackManager manager = SongPlaybackManager.getInstance();
         if (manager.takeMode() == SongPlaybackManager.MODE_MELODY) {
             Song song = manager.song();
@@ -105,6 +107,12 @@ public class FingerstyleActivity extends AppCompatActivity {
                 playComposedMelody(song);
             }
         }
+    }
+
+    @Override
+    public void onConfigurationChanged(android.content.res.Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        ScreenAdapt.adapt(this);
     }
 
     private void playComposedMelody(Song song) {
