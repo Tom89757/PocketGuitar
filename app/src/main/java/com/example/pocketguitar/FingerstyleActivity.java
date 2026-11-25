@@ -18,9 +18,12 @@ import com.example.pocketguitar.view.FretboardView;
 public class FingerstyleActivity extends AppCompatActivity {
 
     private FretboardView fretboardView;
+    private FretSliderView fretSlider;
     private StringPlayer stringPlayer;
     private TextView btnPausePlayback;
     private PausableScheduler melodyScheduler;
+    // 自动弹奏前的指板窗口，弹奏结束后恢复
+    private int savedBaseFret = -1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +32,7 @@ public class FingerstyleActivity extends AppCompatActivity {
         setContentView(R.layout.activity_fingerstyle);
 
         fretboardView = findViewById(R.id.fretboard_view);
-        FretSliderView fretSlider = findViewById(R.id.fret_slider);
+        fretSlider = findViewById(R.id.fret_slider);
 
         stringPlayer = new StringPlayer(this);
 
@@ -38,6 +41,7 @@ public class FingerstyleActivity extends AppCompatActivity {
         melodyScheduler.setOnFinishListener(() -> {
             btnPausePlayback.setText("暂停");
             btnPausePlayback.setVisibility(View.GONE);
+            restoreFretWindow();
         });
         btnPausePlayback.setOnClickListener(v -> togglePlaybackPause());
 
@@ -109,6 +113,7 @@ public class FingerstyleActivity extends AppCompatActivity {
         }
         melodyScheduler.clear();
         btnPausePlayback.setText("暂停");
+        savedBaseFret = fretboardView.getBaseFret();
         int beatMs = song.bpm > 0 ? 60000 / song.bpm : 500;
         for (MelodyNote note : song.melody) {
             if (note == null) {
@@ -118,22 +123,38 @@ public class FingerstyleActivity extends AppCompatActivity {
             if (midi < 0) {
                 continue;
             }
-            int[] sf = NoteMapper.findStringFret(midi);
-            if (sf == null) {
-                continue;
-            }
-            final int str = sf[0];
-            final int fret = sf[1];
             long delay = (long) ((note.bar - 1) * 4 * beatMs + (note.beat - 1) * beatMs);
             if (delay < 0) {
                 delay = 0;
             }
+            // 播放时再定位：优先使用当前可见品格的按弦位置，超出范围则自动滚动指板
             melodyScheduler.schedule(delay, () -> {
-                stringPlayer.playString(str, fret);
-                fretboardView.showNote(str, fret);
+                int[] pos = fretboardView.showNoteForMidi(midi);
+                if (pos == null) {
+                    return;
+                }
+                stringPlayer.playString(pos[0], pos[1]);
+                syncFretSlider();
             });
         }
         btnPausePlayback.setVisibility(melodyScheduler.isActive() ? View.VISIBLE : View.GONE);
+    }
+
+    /** 指板窗口变化后同步底部拖动条位置。 */
+    private void syncFretSlider() {
+        int range = FretboardView.MAX_BASE_FRET - FretboardView.MIN_BASE_FRET;
+        float fraction = (FretboardView.MAX_BASE_FRET - fretboardView.getBaseFret()) / (float) range;
+        fretSlider.setFraction(fraction);
+    }
+
+    /** 自动弹奏结束后恢复用户手动选择的指板窗口。 */
+    private void restoreFretWindow() {
+        if (savedBaseFret < 0) {
+            return;
+        }
+        fretboardView.setBaseFret(savedBaseFret);
+        syncFretSlider();
+        savedBaseFret = -1;
     }
 
     private void togglePlaybackPause() {
@@ -146,6 +167,21 @@ public class FingerstyleActivity extends AppCompatActivity {
         } else {
             melodyScheduler.pause();
             btnPausePlayback.setText("继续");
+        }
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        // 离开页面时若自动弹奏尚未结束，直接中止并恢复指板窗口，
+        // 避免切回后窗口停留在自动滚动后的高品位（表现为升 key）。
+        if (melodyScheduler != null && melodyScheduler.isActive()) {
+            melodyScheduler.clear();
+            if (btnPausePlayback != null) {
+                btnPausePlayback.setText("暂停");
+                btnPausePlayback.setVisibility(View.GONE);
+            }
+            restoreFretWindow();
         }
     }
 

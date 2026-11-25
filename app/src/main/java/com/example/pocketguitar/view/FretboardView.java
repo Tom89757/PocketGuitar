@@ -157,6 +157,52 @@ public class FretboardView extends View {
         invalidate();
     }
 
+    /**
+     * 自动弹奏用：为 MIDI 音高挑选一个能在指板上显示出来的按弦位置。
+     * 优先落当前可见的品格；都不在可见范围时滚动指板让音符显示。
+     * 返回最终位置 {弦序号, 品位}，无法映射时返回 null。
+     */
+    public int[] showNoteForMidi(int midi) {
+        if (midi < 0) {
+            return null;
+        }
+        int minFret = baseFret;
+        int maxFret = baseFret + SPACE_COUNT - 1;
+        int bestString = -1;
+        int bestFret = Integer.MAX_VALUE;
+        for (int s = 0; s < 6; s++) {
+            int fret = midi - OPEN_MIDI[s];
+            if (fret < minFret || fret > maxFret) {
+                continue;
+            }
+            if (fret < bestFret) {
+                bestFret = fret;
+                bestString = s;
+            }
+        }
+        if (bestString < 0) {
+            // 可见范围内没有：找品数最少的可弹位置（空弦无法显示在指板上）
+            int maxDisplayableFret = MAX_BASE_FRET + SPACE_COUNT - 1;
+            for (int s = 0; s < 6; s++) {
+                int fret = midi - OPEN_MIDI[s];
+                if (fret < MIN_BASE_FRET || fret > maxDisplayableFret) {
+                    continue;
+                }
+                if (fret < bestFret) {
+                    bestFret = fret;
+                    bestString = s;
+                }
+            }
+            if (bestString < 0) {
+                return null;
+            }
+            // 滚动窗口，让该音大致居中显示
+            setBaseFret(bestFret - SPACE_COUNT / 2);
+        }
+        showNote(bestString, bestFret);
+        return new int[]{bestString, bestFret};
+    }
+
     @Override
     protected void onSizeChanged(int w, int h, int oldw, int oldh) {
         super.onSizeChanged(w, h, oldw, oldh);
