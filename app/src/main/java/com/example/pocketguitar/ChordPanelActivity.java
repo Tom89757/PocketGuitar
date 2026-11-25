@@ -28,6 +28,7 @@ import com.example.pocketguitar.music.Song;
 import com.example.pocketguitar.music.SongPlaybackManager;
 import com.example.pocketguitar.music.SongSection;
 import com.example.pocketguitar.util.ChordImageManager;
+import com.example.pocketguitar.util.PausableScheduler;
 import com.example.pocketguitar.util.ScreenAdapt;
 import com.example.pocketguitar.util.SharedChordManager;
 import com.example.pocketguitar.util.StringPlayer;
@@ -53,6 +54,8 @@ public class ChordPanelActivity extends AppCompatActivity implements SharedChord
     private SharedChordManager sharedChordManager;
     private StringPlayer stringPlayer;
     private TextView tvPlayingNote;
+    private TextView btnPausePlayback;
+    private PausableScheduler playbackScheduler;
     private final String TAG = "ChordPanelActivity";
     private final List<String> rhythmList = new ArrayList();
     private String currentPlayRoot = "";
@@ -78,6 +81,18 @@ public class ChordPanelActivity extends AppCompatActivity implements SharedChord
         this.currentPlayChordType = this.sharedChordManager.getCurrentPlayTypeChord();
         this.chordButtonsGroup = (LinearLayout) findViewById(R.id.chord_buttons_group);
         this.tvPlayingNote = (TextView) findViewById(R.id.tv_playing_note);
+        this.btnPausePlayback = (TextView) findViewById(R.id.btn_pause_playback);
+        this.playbackScheduler = new PausableScheduler();
+        this.playbackScheduler.setOnFinishListener(() -> {
+            this.btnPausePlayback.setText("暂停");
+            this.btnPausePlayback.setVisibility(View.GONE);
+        });
+        this.btnPausePlayback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                togglePlaybackPause();
+            }
+        });
         try {
             loadChordList();
             createChordButtons();
@@ -449,9 +464,26 @@ public class ChordPanelActivity extends AppCompatActivity implements SharedChord
         if (song == null) {
             return;
         }
+        this.playbackScheduler.clear();
+        this.btnPausePlayback.setText("暂停");
         playComposedChords(song);
         if (mode == SongPlaybackManager.MODE_BOTH) {
             playComposedMelody(song);
+        }
+        this.btnPausePlayback.setVisibility(
+                this.playbackScheduler.isActive() ? View.VISIBLE : View.GONE);
+    }
+
+    private void togglePlaybackPause() {
+        if (!this.playbackScheduler.isActive()) {
+            return;
+        }
+        if (this.playbackScheduler.isPaused()) {
+            this.playbackScheduler.resume();
+            this.btnPausePlayback.setText("暂停");
+        } else {
+            this.playbackScheduler.pause();
+            this.btnPausePlayback.setText("继续");
         }
     }
 
@@ -461,7 +493,6 @@ public class ChordPanelActivity extends AppCompatActivity implements SharedChord
             return;
         }
         int beatMs = song.bpm > 0 ? 60000 / song.bpm : 500;
-        Handler handler = new Handler(Looper.getMainLooper());
         long melodyEndMs = 0;
         for (MelodyNote note : song.melody) {
             if (note == null) {
@@ -482,14 +513,14 @@ public class ChordPanelActivity extends AppCompatActivity implements SharedChord
             if (delay < 0) {
                 delay = 0;
             }
-            handler.postDelayed(() -> {
+            this.playbackScheduler.schedule(delay, () -> {
                 this.stringPlayer.playString(str, fret);
                 showPlayingNote(pitch);
-            }, delay);
+            });
             melodyEndMs = Math.max(melodyEndMs, delay + (long) (Math.max(note.duration, 1) * beatMs));
         }
         if (melodyEndMs > 0) {
-            handler.postDelayed(this::hidePlayingNote, melodyEndMs);
+            this.playbackScheduler.schedule(melodyEndMs, this::hidePlayingNote);
         }
     }
 
@@ -527,10 +558,9 @@ public class ChordPanelActivity extends AppCompatActivity implements SharedChord
         }
         int beatMs = song.bpm > 0 ? 60000 / song.bpm : 500;
         long chordDuration = beatMs * 4L;
-        Handler handler = new Handler(Looper.getMainLooper());
         for (int i = 0; i < names.size(); i++) {
             final String name = names.get(i);
-            handler.postDelayed(() -> playChordByName(name), i * chordDuration);
+            this.playbackScheduler.schedule(i * chordDuration, () -> playChordByName(name));
         }
     }
 
@@ -582,6 +612,9 @@ public class ChordPanelActivity extends AppCompatActivity implements SharedChord
     protected void onDestroy() {
         this.sharedChordManager.removeChangeListener(this);
         this.sharedChordManager.removePlayerChordListener(this);
+        if (this.playbackScheduler != null) {
+            this.playbackScheduler.clear();
+        }
         if (this.stringPlayer != null) {
             this.stringPlayer.release();
         }

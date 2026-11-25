@@ -1,14 +1,14 @@
 package com.example.pocketguitar;
 
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Looper;
 import android.view.View;
+import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.pocketguitar.music.MelodyNote;
 import com.example.pocketguitar.music.NoteMapper;
 import com.example.pocketguitar.music.Song;
 import com.example.pocketguitar.music.SongPlaybackManager;
+import com.example.pocketguitar.util.PausableScheduler;
 import com.example.pocketguitar.util.ScreenAdapt;
 import com.example.pocketguitar.util.StringPlayer;
 import com.example.pocketguitar.util.TabNavigator;
@@ -19,6 +19,8 @@ public class FingerstyleActivity extends AppCompatActivity {
 
     private FretboardView fretboardView;
     private StringPlayer stringPlayer;
+    private TextView btnPausePlayback;
+    private PausableScheduler melodyScheduler;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +32,14 @@ public class FingerstyleActivity extends AppCompatActivity {
         FretSliderView fretSlider = findViewById(R.id.fret_slider);
 
         stringPlayer = new StringPlayer(this);
+
+        btnPausePlayback = findViewById(R.id.btn_pause_playback);
+        melodyScheduler = new PausableScheduler();
+        melodyScheduler.setOnFinishListener(() -> {
+            btnPausePlayback.setText("暂停");
+            btnPausePlayback.setVisibility(View.GONE);
+        });
+        btnPausePlayback.setOnClickListener(v -> togglePlaybackPause());
 
         fretboardView.setOnNotePressedListener(new FretboardView.OnNotePressedListener() {
             @Override
@@ -97,8 +107,9 @@ public class FingerstyleActivity extends AppCompatActivity {
         if (song.melody == null || song.melody.isEmpty()) {
             return;
         }
+        melodyScheduler.clear();
+        btnPausePlayback.setText("暂停");
         int beatMs = song.bpm > 0 ? 60000 / song.bpm : 500;
-        Handler handler = new Handler(Looper.getMainLooper());
         for (MelodyNote note : song.melody) {
             if (note == null) {
                 continue;
@@ -117,15 +128,32 @@ public class FingerstyleActivity extends AppCompatActivity {
             if (delay < 0) {
                 delay = 0;
             }
-            handler.postDelayed(() -> {
+            melodyScheduler.schedule(delay, () -> {
                 stringPlayer.playString(str, fret);
                 fretboardView.showNote(str, fret);
-            }, delay);
+            });
+        }
+        btnPausePlayback.setVisibility(melodyScheduler.isActive() ? View.VISIBLE : View.GONE);
+    }
+
+    private void togglePlaybackPause() {
+        if (!melodyScheduler.isActive()) {
+            return;
+        }
+        if (melodyScheduler.isPaused()) {
+            melodyScheduler.resume();
+            btnPausePlayback.setText("暂停");
+        } else {
+            melodyScheduler.pause();
+            btnPausePlayback.setText("继续");
         }
     }
 
     @Override
     protected void onDestroy() {
+        if (melodyScheduler != null) {
+            melodyScheduler.clear();
+        }
         if (stringPlayer != null) {
             stringPlayer.release();
         }
