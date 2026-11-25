@@ -135,6 +135,18 @@ public class SongListActivity extends AppCompatActivity implements SongAdapter.L
         }
     }
 
+    @Override
+    public void onPlayBoth(SongMeta meta, int position) {
+        try {
+            Song song = storage.load(meta.id);
+            SongPlaybackManager.getInstance().set(song, SongPlaybackManager.MODE_BOTH);
+            TabNavigator.switchTo(this, ChordPanelActivity.class,
+                    TabNavigator.TAB_COMPOSE, TabNavigator.TAB_CHORD_PANEL);
+        } catch (IOException e) {
+            Toast.makeText(this, "加载曲谱失败", Toast.LENGTH_SHORT).show();
+        }
+    }
+
     private void showSongDetail(SongMeta meta, Song song) {
         TextView title = new TextView(this);
         title.setText(meta.title != null ? meta.title : "曲谱");

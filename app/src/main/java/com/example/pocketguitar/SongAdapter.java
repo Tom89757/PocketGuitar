@@ -17,6 +17,7 @@ public class SongAdapter extends RecyclerView.Adapter<SongAdapter.ViewHolder> {
         void onOpen(SongMeta meta, int position);
         void onPlayChords(SongMeta meta, int position);
         void onPlayMelody(SongMeta meta, int position);
+        void onPlayBoth(SongMeta meta, int position);
         void onExport(SongMeta meta, int position);
         void onDelete(SongMeta meta, int position);
     }
@@ -76,6 +77,9 @@ public class SongAdapter extends RecyclerView.Adapter<SongAdapter.ViewHolder> {
         holder.btnPlayMelody.setOnClickListener(v -> {
             if (listener != null) listener.onPlayMelody(meta, holder.getAdapterPosition());
         });
+        holder.btnPlayBoth.setOnClickListener(v -> {
+            if (listener != null) listener.onPlayBoth(meta, holder.getAdapterPosition());
+        });
         holder.btnExport.setOnClickListener(v -> {
             if (listener != null) listener.onExport(meta, holder.getAdapterPosition());
         });
@@ -94,6 +98,7 @@ public class SongAdapter extends RecyclerView.Adapter<SongAdapter.ViewHolder> {
         final TextView tvInfo;
         final TextView btnPlayChords;
         final TextView btnPlayMelody;
+        final TextView btnPlayBoth;
         final TextView btnExport;
         final TextView btnDelete;
 
@@ -103,6 +108,7 @@ public class SongAdapter extends RecyclerView.Adapter<SongAdapter.ViewHolder> {
             tvInfo = itemView.findViewById(R.id.tv_info);
             btnPlayChords = itemView.findViewById(R.id.btn_play_chords);
             btnPlayMelody = itemView.findViewById(R.id.btn_play_melody);
+            btnPlayBoth = itemView.findViewById(R.id.btn_play_both);
             btnExport = itemView.findViewById(R.id.btn_export);
             btnDelete = itemView.findViewById(R.id.btn_delete);
         }
