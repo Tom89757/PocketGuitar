@@ -5,6 +5,8 @@ public final class SongPlaybackManager {
     public static final int MODE_NONE = 0;
     public static final int MODE_CHORDS = 1;
     public static final int MODE_MELODY = 2;
+    /** 同时演奏和弦伴奏与旋律，在和弦面板执行。 */
+    public static final int MODE_BOTH = 3;
 
     private static final SongPlaybackManager INSTANCE = new SongPlaybackManager();
 

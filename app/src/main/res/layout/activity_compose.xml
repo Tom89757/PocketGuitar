@@ -23,14 +23,14 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@id/top_nav">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:paddingStart="24dp"
-            android:paddingTop="56dp"
+            android:paddingTop="8dp"
             android:paddingEnd="24dp"
             android:paddingBottom="24dp">
 
@@ -232,6 +232,16 @@
                     android:text="在指弹面板弹奏旋律"
                     android:textColor="@color/dark_button_text" />
             </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_play_both"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@color/dark_button_background"
+                android:enabled="false"
+                android:text="同时演奏伴奏和旋律"
+                android:textColor="@color/dark_button_text" />
 
             <LinearLayout
                 android:layout_width="match_parent"

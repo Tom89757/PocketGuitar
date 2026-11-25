@@ -22,6 +22,8 @@ import com.example.pocketguitar.model.BarreInfo;
 import com.example.pocketguitar.model.ChordFingering;
 import com.example.pocketguitar.model.ChordItem;
 import com.example.pocketguitar.music.ChordResolver;
+import com.example.pocketguitar.music.MelodyNote;
+import com.example.pocketguitar.music.NoteMapper;
 import com.example.pocketguitar.music.Song;
 import com.example.pocketguitar.music.SongPlaybackManager;
 import com.example.pocketguitar.music.SongSection;
@@ -50,6 +52,7 @@ public class ChordPanelActivity extends AppCompatActivity implements SharedChord
     private LinearLayout rhythmButtonsGroup;
     private SharedChordManager sharedChordManager;
     private StringPlayer stringPlayer;
+    private TextView tvPlayingNote;
     private final String TAG = "ChordPanelActivity";
     private final List<String> rhythmList = new ArrayList();
     private String currentPlayRoot = "";
@@ -74,6 +77,7 @@ public class ChordPanelActivity extends AppCompatActivity implements SharedChord
         this.currentPlayRoot = this.sharedChordManager.getCurrentPlayRoot();
         this.currentPlayChordType = this.sharedChordManager.getCurrentPlayTypeChord();
         this.chordButtonsGroup = (LinearLayout) findViewById(R.id.chord_buttons_group);
+        this.tvPlayingNote = (TextView) findViewById(R.id.tv_playing_note);
         try {
             loadChordList();
             createChordButtons();
@@ -437,11 +441,70 @@ public class ChordPanelActivity extends AppCompatActivity implements SharedChord
     protected void onResume() {
         super.onResume();
         SongPlaybackManager manager = SongPlaybackManager.getInstance();
-        if (manager.takeMode() == SongPlaybackManager.MODE_CHORDS) {
-            Song song = manager.song();
-            if (song != null) {
-                playComposedChords(song);
+        int mode = manager.takeMode();
+        if (mode != SongPlaybackManager.MODE_CHORDS && mode != SongPlaybackManager.MODE_BOTH) {
+            return;
+        }
+        Song song = manager.song();
+        if (song == null) {
+            return;
+        }
+        playComposedChords(song);
+        if (mode == SongPlaybackManager.MODE_BOTH) {
+            playComposedMelody(song);
+        }
+    }
+
+    /** 在和弦面板同时演奏旋律：发声并在左上角显示当前音符。 */
+    private void playComposedMelody(Song song) {
+        if (song.melody == null || song.melody.isEmpty()) {
+            return;
+        }
+        int beatMs = song.bpm > 0 ? 60000 / song.bpm : 500;
+        Handler handler = new Handler(Looper.getMainLooper());
+        long melodyEndMs = 0;
+        for (MelodyNote note : song.melody) {
+            if (note == null) {
+                continue;
             }
+            int midi = NoteMapper.parsePitch(note.pitch);
+            if (midi < 0) {
+                continue;
+            }
+            int[] sf = NoteMapper.findStringFret(midi);
+            if (sf == null) {
+                continue;
+            }
+            final int str = sf[0];
+            final int fret = sf[1];
+            final String pitch = note.pitch;
+            long delay = (long) ((note.bar - 1) * 4 * beatMs + (note.beat - 1) * beatMs);
+            if (delay < 0) {
+                delay = 0;
+            }
+            handler.postDelayed(() -> {
+                this.stringPlayer.playString(str, fret);
+                showPlayingNote(pitch);
+            }, delay);
+            melodyEndMs = Math.max(melodyEndMs, delay + (long) (Math.max(note.duration, 1) * beatMs));
+        }
+        if (melodyEndMs > 0) {
+            handler.postDelayed(this::hidePlayingNote, melodyEndMs);
+        }
+    }
+
+    private void showPlayingNote(String pitch) {
+        if (this.tvPlayingNote == null) {
+            return;
+        }
+        String display = pitch == null ? "" : pitch.replace("#", "♯").replace("b", "♭");
+        this.tvPlayingNote.setText("♪ " + display);
+        this.tvPlayingNote.setVisibility(View.VISIBLE);
+    }
+
+    private void hidePlayingNote() {
+        if (this.tvPlayingNote != null) {
+            this.tvPlayingNote.setVisibility(View.GONE);
         }
     }
 

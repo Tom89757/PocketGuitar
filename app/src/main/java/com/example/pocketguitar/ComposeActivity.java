@@ -71,6 +71,7 @@ public class ComposeActivity extends AppCompatActivity {
     private TextView tvResult;
     private Button btnPlayChords;
     private Button btnPlayMelody;
+    private Button btnPlayBoth;
     private Button btnSave;
     private AiPrefs prefs;
     private SongStorage songStorage;
@@ -89,6 +90,7 @@ public class ComposeActivity extends AppCompatActivity {
         tvResult = findViewById(R.id.tv_result);
         btnPlayChords = findViewById(R.id.btn_play_chords);
         btnPlayMelody = findViewById(R.id.btn_play_melody);
+        btnPlayBoth = findViewById(R.id.btn_play_both);
         btnSave = findViewById(R.id.btn_save);
         spKey = findViewById(R.id.spinner_key);
         spStyle = findViewById(R.id.spinner_style);
@@ -106,6 +108,7 @@ public class ComposeActivity extends AppCompatActivity {
                 startActivity(new Intent(this, AiSettingsActivity.class)));
         btnPlayChords.setOnClickListener(v -> playChordsOnPanel());
         btnPlayMelody.setOnClickListener(v -> playMelodyOnPanel());
+        btnPlayBoth.setOnClickListener(v -> playBothOnPanel());
         btnSave.setOnClickListener(v -> saveSong());
         findViewById(R.id.btn_my_songs).setOnClickListener(v ->
                 startActivity(new Intent(this, SongListActivity.class)));
@@ -195,6 +198,7 @@ public class ComposeActivity extends AppCompatActivity {
                     tvResult.setText(SongParser.toText(song));
                     btnPlayChords.setEnabled(true);
                     btnPlayMelody.setEnabled(hasMelody(song));
+                    btnPlayBoth.setEnabled(hasMelody(song));
                     btnSave.setEnabled(true);
                 } catch (AiModelException parseError) {
                     tvStatus.setText(parseError.getMessage());
@@ -230,6 +234,15 @@ public class ComposeActivity extends AppCompatActivity {
         SongPlaybackManager.getInstance().set(currentSong, SongPlaybackManager.MODE_MELODY);
         TabNavigator.switchTo(this, FingerstyleActivity.class,
                 TabNavigator.TAB_COMPOSE, TabNavigator.TAB_FINGERSTYLE);
+    }
+
+    private void playBothOnPanel() {
+        if (currentSong == null) {
+            return;
+        }
+        SongPlaybackManager.getInstance().set(currentSong, SongPlaybackManager.MODE_BOTH);
+        TabNavigator.switchTo(this, ChordPanelActivity.class,
+                TabNavigator.TAB_COMPOSE, TabNavigator.TAB_CHORD_PANEL);
     }
 
     private boolean hasMelody(Song song) {
