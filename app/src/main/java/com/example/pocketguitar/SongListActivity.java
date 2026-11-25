@@ -1,9 +1,11 @@
 package com.example.pocketguitar;
 
 import android.app.AlertDialog;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -134,23 +136,39 @@ public class SongListActivity extends AppCompatActivity implements SongAdapter.L
     }
 
     private void showSongDetail(SongMeta meta, Song song) {
+        TextView title = new TextView(this);
+        title.setText(meta.title != null ? meta.title : "曲谱");
+        title.setTypeface(Typeface.DEFAULT_BOLD);
+        title.setTextSize(18);
+        title.setTextColor(getResources().getColor(R.color.dark_text_primary));
+
         TextView body = new TextView(this);
         body.setText(SongParser.toText(song));
         body.setTextIsSelectable(true);
         body.setTextSize(15);
         body.setTextColor(getResources().getColor(R.color.dark_text_primary));
-        body.setPadding(dp(8), dp(4), dp(8), dp(4));
+        body.setPadding(dp(4), dp(8), dp(4), dp(4));
 
         ScrollView scroller = new ScrollView(this);
-        scroller.setPadding(dp(16), dp(8), dp(16), dp(8));
         scroller.addView(body, new ScrollView.LayoutParams(
                 ScrollView.LayoutParams.MATCH_PARENT, ScrollView.LayoutParams.WRAP_CONTENT));
 
-        new AlertDialog.Builder(this)
-                .setTitle(meta.title != null ? meta.title : "曲谱")
-                .setView(scroller)
-                .setPositiveButton(android.R.string.ok, null)
-                .show();
+        LinearLayout container = new LinearLayout(this);
+        container.setOrientation(LinearLayout.VERTICAL);
+        container.setPadding(dp(20), dp(16), dp(20), dp(8));
+        container.addView(title);
+        container.addView(scroller);
+
+        AlertDialog dialog = new AlertDialog.Builder(this)
+                .setView(container)
+                .setPositiveButton("关闭", null)
+                .create();
+        dialog.show();
+        if (dialog.getWindow() != null) {
+            dialog.getWindow().setBackgroundDrawableResource(R.drawable.bg_dark_panel);
+        }
+        dialog.getButton(AlertDialog.BUTTON_POSITIVE)
+                .setTextColor(getResources().getColor(R.color.dark_accent));
     }
 
     private int dp(int value) {
